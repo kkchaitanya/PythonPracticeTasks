@@ -2,7 +2,7 @@
 import datetime
 from dateutil.parser import parse
 
-def validate_inputs(expense_id, date, category, amount, description):
+def validate_inputs(expense_id, date, category, amount, description,logger=None):
     """Validates all expense input fields """
     if not expense_id or not str(expense_id).strip():
         raise ValueError("Expense ID cannot be empty.")
@@ -16,8 +16,10 @@ def validate_inputs(expense_id, date, category, amount, description):
         raise ValueError("Description cannot be empty.")
     try:
             age_int = float(amount)
-    except (TypeError, ValueError):
+    except (TypeError, ValueError) as ex:
+            logger.error(f"Failed to load file: {ex}")
             raise ValueError("amount must be a valid float.")
+        
     
 def get_expense_by_id(expenses, expense_id):
     """Returns a student dictionary by ID, or None."""
@@ -26,12 +28,13 @@ def get_expense_by_id(expenses, expense_id):
             return s
     return None
 
-def add_expenses(expenses, expense_id, date, category, amount, description):
+def add_expenses(expenses, expense_id, date, category, amount, description,logger=None):
     """ add new expenses to the CSV file"""
     try: 
          ## validate input ##
          validate_inputs(expense_id, date, category, amount, description)
          if get_expense_by_id(expenses, expense_id):
+            logger.error(f"expense ID {expense_id} already exists.")
             raise ValueError(f"expense ID {expense_id} already exists.")
          expenses.append({
                     "id": str(expense_id).strip(),
@@ -40,23 +43,27 @@ def add_expenses(expenses, expense_id, date, category, amount, description):
                     "amount": float(amount),
                     "description": str(description).strip()
                 })
+         logger.info(f"add_expenses completed")
     except Exception as ex:
         print(f"Error: {ex}")
+        logger.error(f"Failed to load file: {ex}")
         return False
     
-def remove_expense(expenses, expense_id):
+def remove_expense(expenses, expense_id,logger=None):
     """Removes a expense by ID."""
     try:
         expense = get_expense_by_id(expenses, expense_id)
         if not expense_id:
             raise ValueError(f"Student ID {expense_id} not found.")
         expense.remove(expense)
+        logger.info(f"remove_expense completed")
         return True
     except ValueError as ve:
         print(f"Error: {ve}")
+        logger.error(f"Failed to load file: {ve}")
         return False
     
-def update_expense(expenses, expense_id, date=None, category=None, amount=None, description=None):
+def update_expense(expenses, expense_id, date=None, category=None, amount=None, description=None,logger=None):
     """Updates fields of an existing student."""
     try:
         expense = get_expense_by_id(expenses, expense_id)
@@ -70,13 +77,15 @@ def update_expense(expenses, expense_id, date=None, category=None, amount=None, 
             expense["amount"] = float(amount)
         if description is not None:
             expense["description"] = str(description)   
+        logger.info(f"update_expense completed")
         return True
     except Exception as ex:
         print(f"Error: {ex}")
+        logger.error(f"Failed to load file: {ex}")
         return False
     
-def search_expense(expenses, keyword):
-    """Searches students by ID, name, or email."""
+def search_expense(expenses, keyword,logger):
+    """Searches search_expense by ID, deascription."""
     try:
         keyword = str(keyword).lower()
         results = [
@@ -87,8 +96,10 @@ def search_expense(expenses, keyword):
             )
             ]
         display_expenses(results)
+        logger.info(f"search_expense completed")
         return results
     except Exception as e:
+        logger.error(f"Failed to load file: {e}")
         return []
 
 def display_all_expenses(expenses):

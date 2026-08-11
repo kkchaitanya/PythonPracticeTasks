@@ -1,13 +1,13 @@
 # sms/logger_setup.py
 import logging
 
-def setup_logger(log_file="student.log"):
+def setup_logger(log_file="logs/expenses.log"):
     """
     Configures and returns a logger that writes to log_file.
     Log format: timestamp - level - message
     """
     try:
-        logger = logging.getLogger("StudentManagementSystem")
+        logger = logging.getLogger("ExpenseTrackerSystem")
         logger.setLevel(logging.INFO)
 
         # Avoid duplicate handlers if function is called multiple times
