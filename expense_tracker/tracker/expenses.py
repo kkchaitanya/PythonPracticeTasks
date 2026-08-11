@@ -22,7 +22,7 @@ def validate_inputs(expense_id, date, category, amount, description):
 def get_expense_by_id(expenses, expense_id):
     """Returns a student dictionary by ID, or None."""
     for s in expenses:
-        if s["id"] == expense_id:
+        if s["id"] == int(expense_id):
             return s
     return None
 
@@ -80,15 +80,29 @@ def search_expense(expenses, keyword):
     try:
         keyword = str(keyword).lower()
         results = [
-            s for s in expenses
-            if keyword in s["id"].lower()
-            or keyword in s["category"].lower()
-            or keyword in s["description"].lower()
-        ]
+            item for item in expenses
+            if any(
+            keyword.lower() in str(item.get(col, "")).lower()
+            for col in ["date", "category", "description"]
+            )
+            ]
+        display_expenses(results)
         return results
     except Exception as e:
         return []
 
 def display_all_expenses(expenses):
     """Returns the list of all expenses (for display)."""
+    display_expenses(expenses)
     return expenses
+
+def display_expenses(expenses):
+    print(f"{'ID':<5} {'DATE':<12} {'CATEGORY':<15} {'AMOUNT':<10} {'DESCRIPTION'}")
+    for item in expenses:
+        print(
+            f"{item['id']:<5} "
+            f"{str(item['date']):<12} "
+            f"{item['category']:<15} "
+            f"{item['amount']:<10} "
+            f"{item['description']}"
+        )

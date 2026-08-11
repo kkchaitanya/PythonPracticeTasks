@@ -31,10 +31,9 @@ def main():
          elif choice == "4":  # Search expense
                 keyword = get_search_keyword()
                 if keyword:
-                    results = search_expense(expenses, keyword)
-                print(results)
+                    search_expense(expenses, keyword)
          elif choice == "5":  # Display All
-                print(display_all_expenses(expenses))
+                display_all_expenses(expenses)
          elif choice == "6":  # Save to File
             try:
                 save_all(expenses)
