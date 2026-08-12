@@ -1,0 +1,60 @@
+Expense Tracker
+
+What to build
+Objective
+
+Develop a personal expense tracker.
+
+Features
+
+Add Expense
+
+Delete Expense
+
+Update Expense
+
+Monthly Summary
+
+Category-wise Summary
+
+Highest Expense
+
+Export Report
+
+Requirements
+
+Create separate modules
+
+expenses.py
+
+reports.py
+
+validation.py
+
+logger.py
+
+Use a custom package.
+
+Handle invalid inputs using exceptions.
+
+Log every operation.
+
+Store expenses in CSV.
+
+Bonus
+
+Generate a monthly expense report automatically.
+
+YouTube Submission
+
+Explain
+
+Module organization
+
+Function reuse
+
+Exception handling
+
+Logging
+
+File operations

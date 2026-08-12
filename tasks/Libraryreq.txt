@@ -1,0 +1,43 @@
+Library Management System
+Due 8/11/2026, 9:38:00 PM · 25 marks
+
+What to build
+Objective
+
+Create a console-based library application.
+
+Features
+
+Add Book
+
+Borrow Book
+
+Return Book
+
+Search Book
+
+View Available Books
+
+Requirements
+
+Organize the project into packages.
+
+Use functions throughout.
+
+Handle exceptions
+
+Book not found
+
+Already borrowed
+
+Invalid book ID
+
+Log every borrow and return event.
+
+Bonus
+
+Maintain a borrowing history.
+
+YouTube Submission
+
+Show exception handling by intentionally creating invalid scenarios.
