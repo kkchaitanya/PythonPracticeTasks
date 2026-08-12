@@ -1,7 +1,8 @@
+from tracker.reports import export_report
 from tracker.logger import setup_logger
 from tracker.file_handler import load_all, save_all
 from tracker.expenses import add_expenses, display_all_expenses, remove_expense, search_expense, update_expense
-from tracker.menu import get_choice, get_expense_input, get_search_keyword, get_update_input, show_menu
+from tracker.menu import get_choice, get_expense_input, get_report_input, get_search_keyword, get_update_input, show_menu
 
 
 def main():
@@ -46,7 +47,7 @@ def main():
             except Exception as e:
                 print(f"Failed to save: {e}")
                 logger.error(f"Failed to save:.{e}")
-         elif choice == "7":  # Exit
+         elif choice == "8":  # Exit
                 try:
                     save_all(expenses,logger)
                     print("Data saved. Goodbye!")
@@ -56,6 +57,14 @@ def main():
                     print("Error during exit save. Exiting anyway.")
                     logger.error(f"Error during exit save. Exiting anyway.{e}")
                     break
+         elif choice == "7":
+             try:
+                month,year= get_report_input()
+                export_report(expenses,month,year,logger)
+             except Exception as ex:
+                 print("Error during report generation.")
+                 logger.error(f"Error during report generation. Exiting anyway.{e}")
+                 break
 if __name__ == "__main__":
     try:
         main()

@@ -10,7 +10,8 @@ def show_menu():
     print("4. Search Expense")
     print("5. Display All Expense")
     print("6. Save Data to File")
-    print("7. Exit")
+    print("7. Generate Reports")
+    print("8. Exit")
     print("=" * 50)
 
 def get_choice():
@@ -58,4 +59,14 @@ def get_search_keyword():
     try:
         return input("Enter search keyword (ID/category/description): ").strip()
     except (KeyboardInterrupt, EOFError):
+        return None
+
+def get_report_input():
+    """ Get report input."""
+    try:
+        month = input("Enter month: ").strip() 
+        year = input("Enter year:").strip()
+        return month,year
+    except Exception as ex:
+        print(f"get_report_input error {ex}")
         return None
