@@ -49,19 +49,22 @@ def generate_account_number():
     return last_account + 1
 
 
-def create_account(name, initial_balance):
-    """
-    Create a new bank account.
-    """
-    account_no = generate_account_number()
+def create_account(name, initial_balance,logger=None):
+    try:
+        """
+        Create a new bank account.
+        """
+        account_no = generate_account_number()
 
-    with open(CUSTOMER_FILE, "a", newline="") as file:
-        writer = csv.writer(file)
-        writer.writerow([account_no, name, initial_balance])
+        with open(CUSTOMER_FILE, "a", newline="") as file:
+            writer = csv.writer(file)
+            writer.writerow([account_no, name, initial_balance])
 
-    # logger.info(f"Account Created | Account:{account_no}")
+        logger.info(f"Account Created | Account:{account_no}")
 
-    return account_no
+        return account_no
+    except Exception as ex:
+        logger.error(f"create_account exception:{ex}")
 
 
 def get_customer(account_no):
@@ -126,10 +129,10 @@ def get_all_customers():
     return read_customers()
 
 
-acc1 = create_account("Krishna", 5000)
-acc2 = create_account("Ram", 3000)
-print(get_customer(acc1))
-print(check_balance(acc1))
-update_balance(acc1, 7000)
-print(check_balance(acc1))
-print(get_all_customers())
+# acc1 = create_account("Krishna", 5000)
+# acc2 = create_account("Ram", 3000)
+# print(get_customer(acc1))
+# print(check_balance(acc1))
+# update_balance(acc1, 7000)
+# print(check_balance(acc1))
+# print(get_all_customers())

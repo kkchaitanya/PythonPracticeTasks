@@ -38,145 +38,154 @@ def record_transaction(
         ])
 
 
-def deposit(account_no, amount):
-    """
-    Deposit money into account.
-    """
+def deposit(account_no, amount,logger=None):
+    try:
+        """
+        Deposit money into account.
+        """
 
-    if amount <= 0:
-        raise InvalidAmountError(
-            "Deposit amount must be greater than zero."
+        if amount <= 0:
+            raise InvalidAmountError(
+                "Deposit amount must be greater than zero."
+            )
+
+        customer = get_customer(account_no)
+
+        if not customer:
+            raise ValueError("Account not found.")
+
+        new_balance = customer["balance"] + amount
+
+        update_balance(account_no, new_balance)
+
+        record_transaction(
+            "DEPOSIT",
+            account_no,
+            amount
         )
 
-    customer = get_customer(account_no)
-
-    if not customer:
-        raise ValueError("Account not found.")
-
-    new_balance = customer["balance"] + amount
-
-    update_balance(account_no, new_balance)
-
-    record_transaction(
-        "DEPOSIT",
-        account_no,
-        amount
-    )
-
-    # logger.info(
-    #     f"Deposit Successful | Acc:{account_no} | Amount:{amount}"
-    # )
-
-    return new_balance
-
-
-def withdraw(account_no, amount):
-    """
-    Withdraw money from account.
-    """
-
-    if amount <= 0:
-        raise InvalidAmountError(
-            "Withdrawal amount must be greater than zero."
+        logger.info(
+            f"Deposit Successful | Acc:{account_no} | Amount:{amount}"
         )
 
-    customer = get_customer(account_no)
+        return new_balance
+    except Exception as ex:
+        logger.error(f"deposit exception: {ex}")
 
-    if not customer:
-        raise ValueError("Account not found.")
+def withdraw(account_no, amount,logger=None):
+    try:
+        """
+        Withdraw money from account.
+        """
 
-    balance = customer["balance"]
+        if amount <= 0:
+            raise InvalidAmountError(
+                "Withdrawal amount must be greater than zero."
+            )
 
-    if amount > balance:
-        # logger.error(
-        #     f"Insufficient Balance | Acc:{account_no}"
-        # )
+        customer = get_customer(account_no)
 
-        raise InsufficientBalanceError(
-            "Insufficient balance."
+        if not customer:
+            raise ValueError("Account not found.")
+
+        balance = customer["balance"]
+
+        if amount > balance:
+            logger.error(
+                f"Insufficient Balance | Acc:{account_no}"
+            )
+
+            raise InsufficientBalanceError(
+                "Insufficient balance."
+            )
+
+        new_balance = balance - amount
+
+        update_balance(account_no, new_balance)
+
+        record_transaction(
+            "WITHDRAW",
+            account_no,
+            amount
         )
 
-    new_balance = balance - amount
+        logger.info(
+            f"Withdrawal Successful | Acc:{account_no} | Amount:{amount}"
+        )
 
-    update_balance(account_no, new_balance)
-
-    record_transaction(
-        "WITHDRAW",
-        account_no,
-        amount
-    )
-
-    # logger.info(
-    #     f"Withdrawal Successful | Acc:{account_no} | Amount:{amount}"
-    # )
-
-    return new_balance
+        return new_balance
+    except Exception as ex:
+        logger.error(f"withdraw excpetion {ex}")
 
 
 def transfer_money(
         sender_account,
         receiver_account,
-        amount):
-    """
-    Transfer money between accounts.
-    """
-
-    if amount <= 0:
-        raise InvalidAmountError(
-            "Transfer amount must be greater than zero."
-        )
-
-    sender = get_customer(sender_account)
-    receiver = get_customer(receiver_account)
-
-    if not sender:
-        raise ValueError("Sender account not found.")
-
-    if not receiver:
-        raise ValueError("Receiver account not found.")
-
-    if sender["balance"] < amount:
-
-        # logger.error(
-        #     f"Transfer Failed | Sender:{sender_account}"
-        # )
-
-        raise InsufficientBalanceError(
-            "Insufficient balance for transfer."
-        )
-
-    sender_balance = sender["balance"] - amount
-    receiver_balance = receiver["balance"] + amount
-
-    update_balance(
-        sender_account,
-        sender_balance
-    )
-
-    update_balance(
-        receiver_account,
-        receiver_balance
-    )
-
-    record_transaction(
-        "TRANSFER",
-        sender_account,
         amount,
-        sender_account,
-        receiver_account
-    )
+        logger=None):
+    try:
+        """
+        Transfer money between accounts.
+        """
 
-    # logger.info(
-    #     f"Transfer Successful | "
-    #     f"From:{sender_account} "
-    #     f"To:{receiver_account} "
-    #     f"Amount:{amount}"
-    # )
+        if amount <= 0:
+            raise InvalidAmountError(
+                "Transfer amount must be greater than zero."
+            )
 
-    return True
+        sender = get_customer(sender_account)
+        receiver = get_customer(receiver_account)
+
+        if not sender:
+            raise ValueError("Sender account not found.")
+
+        if not receiver:
+            raise ValueError("Receiver account not found.")
+
+        if sender["balance"] < amount:
+
+            logger.error(
+                f"Transfer Failed | Sender:{sender_account}"
+            )
+
+            raise InsufficientBalanceError(
+                "Insufficient balance for transfer."
+            )
+
+        sender_balance = sender["balance"] - amount
+        receiver_balance = receiver["balance"] + amount
+
+        update_balance(
+            sender_account,
+            sender_balance
+        )
+
+        update_balance(
+            receiver_account,
+            receiver_balance
+        )
+
+        record_transaction(
+            "TRANSFER",
+            sender_account,
+            amount,
+            sender_account,
+            receiver_account
+        )
+
+        logger.info(
+            f"Transfer Successful | "
+            f"From:{sender_account} "
+            f"To:{receiver_account} "
+            f"Amount:{amount}"
+        )
+
+        return True
+    except Exception as ex:
+        logger.error(f"transfer_money exception {ex}")
 
 
-def transaction_history(account_no):
+def transaction_history(account_no,logger=None):
     """
     Display account transaction history.
     """
@@ -195,5 +204,6 @@ def transaction_history(account_no):
 
     except FileNotFoundError:
         print("No transaction history found.")
+        logger.error(f"No transaction history found for the account: {account_no}.")
 
     return history
