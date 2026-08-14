@@ -157,12 +157,14 @@ def transfer_money(
 
         update_balance(
             sender_account,
-            sender_balance
+            sender_balance,
+            logger
         )
 
         update_balance(
             receiver_account,
-            receiver_balance
+            receiver_balance,
+            logger
         )
 
         record_transaction(

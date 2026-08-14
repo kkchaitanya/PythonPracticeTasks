@@ -2,7 +2,6 @@
 
 import csv
 import os
-# from logger import logger
 
 CUSTOMER_FILE = "customers.csv"
 
@@ -92,7 +91,7 @@ def check_balance(account_no):
     return None
 
 
-def update_balance(account_no, new_balance):
+def update_balance(account_no, new_balance,logger=None):
     """
     Update customer balance.
     """
@@ -117,9 +116,9 @@ def update_balance(account_no, new_balance):
                 ]
             )
 
-    # logger.info(
-    #     f"Balance Updated | Account:{account_no} | New Balance:{new_balance}"
-    # )
+    logger.info(
+        f"Balance Updated | Account:{account_no} | New Balance:{new_balance}"
+    )
 
 
 def get_all_customers():
