@@ -17,8 +17,8 @@ def show_menu():
 def get_choice():
     """Gets and validates the menu choice."""
     try:
-        choice = input("Enter your choice (1-7): ").strip()
-        if choice not in ["1", "2", "3", "4", "5", "6", "7"]:
+        choice = input("Enter your choice (1-8): ").strip()
+        if choice not in ["1", "2", "3", "4", "5", "6", "7","8"]:
             raise ValueError("Choice must be between 1 and 7.")
         return choice
     except ValueError as ve:
@@ -43,7 +43,7 @@ def get_update_input():
     try:
         expense_id = input("Enter expense ID to update: ").strip()
         date = input("Enter date (or press Enter to skip): ").strip() or None
-        category = input("Enter category (or press Enter to skip): ").strip()
+        category = input("Enter category (or press Enter to skip): ").strip() or None
         amount = input("Enter amount (or press Enter to skip): ").strip() or None
         description = input("Enter description (or press Enter to skip): ").strip() or None
         return expense_id, date, category, amount, description

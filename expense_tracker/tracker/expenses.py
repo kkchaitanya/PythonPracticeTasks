@@ -24,7 +24,7 @@ def validate_inputs(expense_id, date, category, amount, description,logger=None)
 def get_expense_by_id(expenses, expense_id):
     """Returns a student dictionary by ID, or None."""
     for s in expenses:
-        if s["id"] == int(expense_id):
+        if str(s["id"]) == str(expense_id):
             return s
     return None
 
@@ -54,7 +54,7 @@ def remove_expense(expenses, expense_id,logger=None):
     try:
         expense = get_expense_by_id(expenses, expense_id)
         if not expense_id:
-            raise ValueError(f"Student ID {expense_id} not found.")
+            raise ValueError(f"Expense ID {expense_id} not found.")
         expense.remove(expense)
         logger.info(f"remove_expense completed")
         return True
@@ -84,7 +84,7 @@ def update_expense(expenses, expense_id, date=None, category=None, amount=None, 
         logger.error(f"Failed to load file: {ex}")
         return False
     
-def search_expense(expenses, keyword,logger):
+def search_expense(expenses, keyword,logger=None):
     """Searches search_expense by ID, deascription."""
     try:
         keyword = str(keyword).lower()

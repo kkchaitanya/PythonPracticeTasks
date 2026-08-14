@@ -1,0 +1,28 @@
+2026-08-10 01:54:10 - INFO - Logger initialized successfully.
+2026-08-10 01:54:10 - WARNING - Data file not found. Starting with empty list.
+2026-08-10 01:54:30 - INFO - Student added: ID=1, Name=Krishna
+2026-08-10 01:54:36 - INFO - Displayed all students. Total: 1
+2026-08-10 01:55:45 - INFO - Saved 1 student(s) to file.
+2026-08-10 01:55:45 - INFO - Application exited normally.
+2026-08-10 01:55:56 - INFO - Logger initialized successfully.
+2026-08-10 01:55:56 - INFO - Loaded 1 student(s) from file.
+2026-08-10 01:56:02 - INFO - Displayed all students. Total: 1
+2026-08-14 15:57:54 - INFO - Logger initialized successfully.
+2026-08-14 15:57:54 - INFO - Loaded 0 student(s) from file.
+2026-08-14 15:57:57 - INFO - Displayed all students. Total: 0
+2026-08-14 15:58:17 - INFO - Student added: ID=1, Name=Krishna
+2026-08-14 15:58:21 - INFO - Displayed all students. Total: 1
+2026-08-14 15:58:30 - INFO - Saved 1 student(s) to file.
+2026-08-14 15:58:56 - INFO - Student updated: ID=1
+2026-08-14 15:59:01 - INFO - Displayed all students. Total: 1
+2026-08-14 16:07:52 - INFO - Displayed all students. Total: 1
+2026-08-14 16:08:11 - INFO - Student added: ID=2, Name=Hari
+2026-08-14 16:08:14 - INFO - Displayed all students. Total: 2
+2026-08-14 16:08:26 - INFO - Saved 2 student(s) to file.
+2026-08-14 16:08:47 - INFO - Student updated: ID=2
+2026-08-14 16:08:50 - INFO - Displayed all students. Total: 2
+2026-08-14 16:08:59 - INFO - Saved 2 student(s) to file.
+2026-08-14 16:09:12 - INFO - Search 'hari' returned 1 result(s).
+2026-08-14 16:09:18 - INFO - Displayed all students. Total: 2
+2026-08-14 16:09:25 - INFO - Saved 2 student(s) to file.
+2026-08-14 16:09:25 - INFO - Application exited normally.

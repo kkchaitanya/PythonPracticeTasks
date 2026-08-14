@@ -36,7 +36,7 @@ def main():
          elif choice == "4":  # Search expense
                 keyword = get_search_keyword()
                 if keyword:
-                    search_expense(expenses, keyword)
+                    search_expense(expenses, keyword,logger)
          elif choice == "5":  # Display All
                 display_all_expenses(expenses)
          elif choice == "6":  # Save to File
@@ -52,11 +52,10 @@ def main():
                     save_all(expenses,logger)
                     print("Data saved. Goodbye!")
                     logger.info("Data saved. Goodbye!")
-                    break
                 except Exception as e:
                     print("Error during exit save. Exiting anyway.")
                     logger.error(f"Error during exit save. Exiting anyway.{e}")
-                    break
+                break
          elif choice == "7":
              try:
                 month,year= get_report_input()

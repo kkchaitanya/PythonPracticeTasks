@@ -1,0 +1,74 @@
+2026-08-14 13:06:53 - INFO - Logger initialized successfully.
+2026-08-14 13:06:53 - INFO - load_all completed
+2026-08-14 13:07:25 - INFO - add_expenses completed
+2026-08-14 13:09:41 - INFO - Logger initialized successfully.
+2026-08-14 13:09:41 - INFO - load_all completed
+2026-08-14 13:09:55 - INFO - search_expense completed
+2026-08-14 13:10:37 - INFO - Monthly summary generated
+2026-08-14 13:10:37 - INFO - Category summary generated
+2026-08-14 13:10:37 - INFO - Highest expense fetched
+2026-08-14 13:10:37 - INFO - Report exported to reports/report_14_08_2026_13_10_37.txt
+2026-08-14 13:14:16 - INFO - Monthly summary generated
+2026-08-14 13:14:16 - INFO - Category summary generated
+2026-08-14 13:14:16 - INFO - Highest expense fetched
+2026-08-14 13:14:16 - INFO - Report exported to reports/report_14_08_2026_13_14_16.txt
+2026-08-14 13:15:38 - INFO - Logger initialized successfully.
+2026-08-14 13:15:38 - INFO - load_all completed
+2026-08-14 13:15:45 - INFO - Monthly summary generated
+2026-08-14 13:15:45 - INFO - Category summary generated
+2026-08-14 13:15:45 - INFO - Highest expense fetched
+2026-08-14 13:15:45 - INFO - Report exported to reports/report_14_08_2026_13_15_45.txt
+2026-08-14 13:16:40 - INFO - Logger initialized successfully.
+2026-08-14 13:16:40 - INFO - load_all completed
+2026-08-14 13:16:48 - INFO - Monthly summary generated
+2026-08-14 13:16:48 - INFO - Category summary generated
+2026-08-14 13:16:48 - INFO - Highest expense fetched
+2026-08-14 13:16:48 - INFO - Report exported to reports/report_14_08_2026_13_16_48.txt
+2026-08-14 13:16:51 - INFO - save_all completed
+2026-08-14 13:16:51 - INFO - Data saved. Goodbye!
+2026-08-14 13:32:12 - INFO - Logger initialized successfully.
+2026-08-14 13:32:12 - INFO - load_all completed
+2026-08-14 13:32:38 - INFO - add_expenses completed
+2026-08-14 13:33:02 - ERROR - Failed to load file: expense ID 2 not found.
+2026-08-14 13:36:32 - INFO - Logger initialized successfully.
+2026-08-14 13:36:32 - INFO - load_all completed
+2026-08-14 13:36:59 - INFO - add_expenses completed
+2026-08-14 13:37:15 - INFO - update_expense completed
+2026-08-14 13:37:32 - ERROR - Failed to load file: expense ID 1 not found.
+2026-08-14 13:39:39 - INFO - Logger initialized successfully.
+2026-08-14 13:39:41 - INFO - load_all completed
+2026-08-14 13:40:02 - INFO - add_expenses completed
+2026-08-14 13:40:13 - INFO - update_expense completed
+2026-08-14 13:42:39 - INFO - Logger initialized successfully.
+2026-08-14 13:42:39 - INFO - load_all completed
+2026-08-14 13:43:00 - INFO - add_expenses completed
+2026-08-14 13:43:25 - INFO - update_expense completed
+2026-08-14 13:45:05 - INFO - Logger initialized successfully.
+2026-08-14 13:45:05 - INFO - load_all completed
+2026-08-14 13:45:26 - INFO - add_expenses completed
+2026-08-14 13:45:42 - ERROR - Failed to load file: expense ID 1 not found.
+2026-08-14 13:46:33 - INFO - save_all completed
+2026-08-14 13:46:33 - INFO - Data saved. Goodbye!
+2026-08-14 13:46:38 - INFO - Logger initialized successfully.
+2026-08-14 13:46:38 - INFO - load_all completed
+2026-08-14 13:46:58 - INFO - add_expenses completed
+2026-08-14 13:47:17 - INFO - update_expense completed
+2026-08-14 13:50:22 - INFO - Logger initialized successfully.
+2026-08-14 13:50:22 - INFO - load_all completed
+2026-08-14 13:50:56 - INFO - add_expenses completed
+2026-08-14 13:51:20 - INFO - update_expense completed
+2026-08-14 13:51:50 - INFO - save_all completed
+2026-08-14 13:51:50 - INFO - Data saved successfully to expenses.csv
+2026-08-14 15:35:17 - INFO - Logger initialized successfully.
+2026-08-14 15:35:17 - INFO - load_all completed
+2026-08-14 15:35:51 - INFO - add_expenses completed
+2026-08-14 15:36:21 - INFO - update_expense completed
+2026-08-14 15:36:37 - INFO - search_expense completed
+2026-08-14 15:36:44 - INFO - save_all completed
+2026-08-14 15:36:44 - INFO - Data saved successfully to expenses.csv
+2026-08-14 15:37:06 - INFO - Monthly summary generated
+2026-08-14 15:37:06 - INFO - Category summary generated
+2026-08-14 15:37:06 - INFO - Highest expense fetched
+2026-08-14 15:37:06 - INFO - Report exported to reports/report_14_08_2026_15_37_06.txt
+2026-08-14 15:37:28 - INFO - save_all completed
+2026-08-14 15:37:28 - INFO - Data saved. Goodbye!
