@@ -1,0 +1,27 @@
+E-Commerce Shopping Cart
+Due 8/17/2026, 6:36:00 PM · 25 marks
+
+What to build
+Build a basic E-Commerce Shopping Cart System using OOP.
+
+Create a Product class containing information such as
+
+Product ID
+
+Product Name
+
+Category
+
+Price
+
+Available Stock
+
+Create another class called ShoppingCart.
+
+The shopping cart should allow a user to add products, remove products, display selected products, calculate the total amount, and check whether a product is available.
+
+Create at least 5 different products and demonstrate a customer purchasing multiple products.
+
+The program should also handle a simple situation where a product cannot be purchased if its stock is zero.
+
+GitHub Submission: describing how the shopping cart works. Submit only the public GitHub repository link.

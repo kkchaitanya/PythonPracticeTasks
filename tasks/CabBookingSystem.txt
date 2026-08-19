@@ -1,0 +1,39 @@
+Cab Booking System
+Due 8/17/2026, 6:35:00 PM · 25 marks
+
+What to build
+Build a simple Uber/Ola-style Cab Booking System.
+
+Create a parent Vehicle class containing common information such as
+
+Vehicle Number
+
+Brand
+
+Driver Name
+
+Price Per KM
+
+Create child classes such as
+
+Car
+
+Bike
+
+The program should allow a customer to select a vehicle, provide travel distance, and calculate the final fare.
+
+For example
+
+Driver: Rahul
+
+Vehicle: Car
+
+Distance: 15 KM
+
+Rate: ₹20/KM
+
+Total Fare: ₹300
+
+Create at least 2 cars and 2 bikes and calculate fares for multiple trips.
+
+GitHub Submission: Submit only the public GitHub repository link.
