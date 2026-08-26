@@ -1,0 +1,87 @@
+E-Commerce Product Data Analysis
+Due 8/31/2026, 6:13:00 PM · 25 marks
+
+How this is marked
+
+Code, reviewed automatically against the requirements
+15
+Video explanation, reviewed by a mentor
+10
+What to build
+Create a product dataset containing at least 50 products.
+
+Columns
+
+product_id
+
+product_name
+
+category
+
+brand
+
+price
+
+rating
+
+stock
+
+discount
+
+Categories can include
+
+Laptop
+
+Mobile
+
+Headphones
+
+Keyboard
+
+Monitor
+
+Tablet
+
+Accessories
+
+Perform at least these operations
+
+Read CSV.
+
+Inspect dataset.
+
+Find total products.
+
+Find unique categories.
+
+Find unique brands.
+
+Count products category-wise.
+
+Find average price.
+
+Find highest-priced product.
+
+Find lowest-priced product.
+
+Find products priced above ₹50,000.
+
+Find products with rating greater than 4.
+
+Sort products by price.
+
+Sort products by rating.
+
+Find products with stock below 10.
+
+Create discount_amount.
+
+Create final_price.
+
+Find average price by category.
+
+Find average rating by brand.
+
+Find maximum product price category-wise.
+
+Export final data.

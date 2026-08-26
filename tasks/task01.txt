@@ -1,0 +1,97 @@
+Student Result Management Using Pandas
+Due 8/31/2026, 6:12:00 PM · 25 marks
+
+How this is marked
+
+Code, reviewed automatically against the requirements
+15
+Video explanation, reviewed by a mentor
+10
+What to build
+Create a CSV file containing data for at least 25 students.
+
+Columns
+
+student_id
+
+name
+
+age
+
+city
+
+python_marks
+
+sql_marks
+
+pandas_marks
+
+attendance
+
+Using Pandas
+
+Read the CSV file.
+
+Display the first 5 records.
+
+Display the last 5 records.
+
+Display dataset shape.
+
+Display all column names.
+
+Display data types.
+
+Use info().
+
+Use describe().
+
+Find average Python marks.
+
+Find average SQL marks.
+
+Find average Pandas marks.
+
+Find maximum marks.
+
+Find minimum marks.
+
+Sort students by Python marks.
+
+Sort students by attendance.
+
+Filter students having Python marks greater than 80.
+
+Filter students having attendance greater than 75.
+
+Select only name, python_marks, and pandas_marks.
+
+Add a new column called total_marks.
+
+Add another column called average_marks.
+
+Save the processed dataset into
+
+output/student_results.csv
+
+Video Must Explain
+
+What a DataFrame is
+
+Difference between Series and DataFrame
+
+head()
+
+tail()
+
+shape
+
+columns
+
+info()
+
+describe()
+
+Filtering
+
+Sorting
