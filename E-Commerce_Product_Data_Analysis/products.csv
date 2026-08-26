@@ -1,0 +1,51 @@
+product_id,product_name,category,brand,price,rating,stock,discount
+P001,Dell Inspiron 15,Laptop,Dell,55000,4.3,25,10
+P002,HP Pavilion 14,Laptop,HP,62000,4.5,18,12
+P003,Lenovo ThinkPad E14,Laptop,Lenovo,68000,4.7,15,8
+P004,Asus VivoBook 15,Laptop,Asus,48000,4.2,30,15
+P005,Acer Aspire 7,Laptop,Acer,59000,4.4,20,10
+P006,iPhone 15,Mobile,Apple,79999,4.8,12,5
+P007,Galaxy S24,Mobile,Samsung,74999,4.7,16,7
+P008,Redmi Note 13,Mobile,Xiaomi,18999,4.3,40,12
+P009,OnePlus 12,Mobile,OnePlus,64999,4.6,22,10
+P010,Realme GT 6,Mobile,Realme,32999,4.4,28,15
+P011,Sony WH-1000XM5,Headphones,Sony,24999,4.8,14,10
+P012,Boat Rockerz 550,Headphones,Boat,1999,4.2,60,25
+P013,JBL Tune 760NC,Headphones,JBL,5999,4.4,35,18
+P014,AirPods Pro 2,Headphones,Apple,23999,4.8,18,5
+P015,Sennheiser HD 450BT,Headphones,Sennheiser,8999,4.6,20,12
+P016,Logitech K380,Keyboard,Logitech,2999,4.5,45,20
+P017,HP Mechanical Keyboard,Keyboard,HP,3499,4.2,38,15
+P018,Corsair K70 RGB,Keyboard,Corsair,8999,4.7,12,10
+P019,Redragon K552,Keyboard,Redragon,2999,4.4,22,18
+P020,Razer BlackWidow V4,Keyboard,Razer,11999,4.8,10,8
+P021,Dell 24 Inch FHD,Monitor,Dell,12999,4.5,17,12
+P022,LG UltraGear 27,Monitor,LG,21999,4.7,14,10
+P023,Samsung Odyssey G5,Monitor,Samsung,25999,4.6,11,8
+P024,Acer Nitro VG240Y,Monitor,Acer,13999,4.4,20,15
+P025,Asus TUF Gaming 27,Monitor,Asus,24999,4.7,13,10
+P026,iPad Air,Tablet,Apple,54999,4.8,8,5
+P027,Galaxy Tab S9,Tablet,Samsung,62999,4.7,10,7
+P028,Lenovo Tab P12,Tablet,Lenovo,29999,4.4,15,12
+P029,Xiaomi Pad 6,Tablet,Xiaomi,26999,4.5,18,10
+P030,Realme Pad X,Tablet,Realme,18999,4.2,25,15
+P031,USB-C Hub,Accessories,Anker,2499,4.5,55,20
+P032,Wireless Mouse,Accessories,Logitech,1499,4.4,70,25
+P033,Laptop Stand,Accessories,Portronics,999,4.3,65,30
+P034,External SSD 1TB,Accessories,SanDisk,7499,4.7,20,10
+P035,Power Bank 20000mAh,Accessories,Mi,1999,4.4,50,18
+P036,MacBook Air M3,Laptop,Apple,114999,4.9,9,4
+P037,Surface Laptop 6,Laptop,Microsoft,99999,4.6,7,6
+P038,Nothing Phone 3,Mobile,Nothing,42999,4.5,20,10
+P039,Vivo X200,Mobile,Vivo,55999,4.4,19,9
+P040,Oppo Reno 14,Mobile,Oppo,37999,4.3,23,12
+P041,Noise Air Buds,Headphones,Noise,1499,4.1,75,30
+P042,HyperX Alloy FPS,Keyboard,HyperX,4999,4.5,16,15
+P043,BenQ EW2780,Monitor,BenQ,18999,4.6,12,10
+P044,Honor Pad 9,Tablet,Honor,24999,4.3,18,14
+P045,Bluetooth Speaker,Accessories,JBL,3499,4.5,40,20
+P046,Webcam HD,Accessories,Logitech,3999,4.4,30,15
+P047,Gaming Mouse,Accessories,Razer,4999,4.7,18,12
+P048,USB Flash Drive 128GB,Accessories,Kingston,899,4.3,90,25
+P049,Portable HDD 2TB,Accessories,Seagate,6499,4.6,24,10
+P050,Wireless Charger,Accessories,Samsung,2499,4.4,35,18
