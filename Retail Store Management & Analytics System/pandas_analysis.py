@@ -2,7 +2,7 @@
 # Part 4 — Pandas Analysis
 # Using Pandas, determine
 import pandas as pd
-
+from reports import generate_reports
 def pandas_analysis():
     products_df = pd.read_csv("products.csv")
     sales_df = pd.read_csv("sales.csv")
@@ -74,3 +74,6 @@ def pandas_analysis():
     # Products priced above average
     print("Products priced above average")
     print(products_df[products_df["price"] >  products_df["price"].mean()])
+
+    ## trigger reports ###
+    generate_reports(sales_df)
