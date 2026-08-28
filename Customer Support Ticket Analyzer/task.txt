@@ -1,0 +1,82 @@
+What to build
+Create a CSV dataset containing at least 50 support tickets.
+
+Columns
+
+ticket_id
+
+customer_name
+
+category
+
+priority
+
+status
+
+assigned_agent
+
+resolution_time
+
+Categories
+
+Payment
+
+Technical
+
+Login
+
+Course
+
+Refund
+
+Account
+
+Priorities
+
+Low
+
+Medium
+
+High
+
+Critical
+
+Status
+
+Open
+
+In Progress
+
+Resolved
+
+Closed
+
+Perform
+
+Read the dataset.
+
+Find total tickets.
+
+Count tickets by category.
+
+Count tickets by priority.
+
+Count tickets by status.
+
+Find open tickets.
+
+Find critical tickets.
+
+Find resolved tickets.
+
+Find average resolution time.
+
+Find average resolution time per category.
+
+Find tickets handled by each support agent.
+
+Sort tickets by resolution time.
+
+Find tickets taking maximum resolution time.
+
+Export summary report.
