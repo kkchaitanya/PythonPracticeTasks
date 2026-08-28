@@ -1,0 +1,242 @@
+What to build
+This is the major assignment.
+
+Students must combine
+
+Python OOP
+
+Inheritance
+
+File handling
+
+Pandas
+
+CSV
+
+Data analysis
+
+Part 1 — Product Classes
+
+Create parent class
+
+Product
+
+Attributes
+
+product_id
+
+name
+
+brand
+
+price
+
+stock
+
+Methods
+
+display_product()
+
+update_stock()
+
+Create child classes
+
+Electronics
+
+Clothing
+
+Books
+
+Electronics
+
+Additional properties
+
+warranty
+
+model
+
+Clothing
+
+size
+
+material
+
+Books
+
+author
+
+publisher
+
+Part 2 — Product File
+
+Store product information inside
+
+products.csv
+
+Include at least 30 products.
+
+Use Python file handling to
+
+Create the file
+
+Write data
+
+Append products
+
+Read product records
+
+Part 3 — Sales Data
+
+Create
+
+sales.csv
+
+Include at least 50 transactions.
+
+Columns
+
+transaction_id
+
+product_id
+
+product_name
+
+category
+
+quantity
+
+price
+
+customer_city
+
+payment_method
+
+Part 4 — Pandas Analysis
+
+Using Pandas, determine
+
+Total sales transactions
+
+Total quantity sold
+
+Total revenue
+
+Average transaction value
+
+Highest-value transaction
+
+Lowest-value transaction
+
+Best-selling product
+
+Lowest-selling product
+
+Sales category-wise
+
+Revenue category-wise
+
+Revenue product-wise
+
+Revenue city-wise
+
+Payment-method distribution
+
+Top 5 products
+
+Bottom 5 products
+
+Average product price
+
+Maximum product price
+
+Minimum product price
+
+Products having stock below 10
+
+Products priced above average
+
+Part 5 — Generate Reports
+
+Generate
+
+output/
+
+├── cleaned_sales.csv
+
+├── product_report.csv
+
+├── city_sales_report.csv
+
+├── category_report.csv
+
+└── sales_summary.txt
+
+The sales_summary.txt file should contain a human-readable summary.
+
+Example
+
+RETAIL STORE SALES REPORT
+
+Total Transactions: 50
+
+Total Revenue: ₹850000
+
+Average Transaction Value: ₹17000
+
+Best Selling Product: Laptop
+
+Highest Revenue Category: Electronics
+
+Highest Revenue City: Bangalore
+
+Final Project Video Requirements
+
+The YouTube video should be detailed and should explain
+
+Problem statement
+
+Folder structure
+
+Dataset creation
+
+File handling
+
+open()
+
+read()
+
+write()
+
+append()
+
+Context manager
+
+Pandas Series
+
+Pandas DataFrame
+
+Reading CSV
+
+Filtering
+
+Sorting
+
+Data cleaning
+
+Aggregation
+
+groupby()
+
+Parent class
+
+Child class
+
+Inheritance
+
+Method overriding
+
+Complete project execution
+
+Generated reports
+
+Key insights obtained from the dataset
