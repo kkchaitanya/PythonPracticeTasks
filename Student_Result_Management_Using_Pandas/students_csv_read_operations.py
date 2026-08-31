@@ -1,12 +1,17 @@
 import pandas as pd
 
 df = pd.read_csv("students.csv")
-
+print("#### Head ####")
 print(df.head()) # First 5 rows
+print("#### tail ####")
 print(df.tail()) # Last 5 rows
+print("#### shape ####")
 print(df.shape) # Rows and columns count
+print("#### columns ####")
 print(df.columns) # All columns
+print("#### info ####")
 print(df.info())
+print("#### describe ####")
 print(df.describe())
 
 #Find average Python marks.
@@ -38,4 +43,4 @@ df["total_marks"]=df["python_marks"]+df["pandas_marks"]
 #Add another column called average_marks.
 df["average_marks"] = df["total_marks"]/2
 #Save the processed dataset into
-df.to_csv("students_filer.csv", index=False)
+df.to_csv("students_filter.csv", index=False)
