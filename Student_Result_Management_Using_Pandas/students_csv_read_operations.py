@@ -10,11 +10,11 @@ print(df.info())
 print(df.describe())
 
 #Find average Python marks.
-print(f"python_marks : {df['python_marks'].mean()}")
+print(f"average python_marks : {df['python_marks'].mean()}")
 #Find average SQL marks.
-print(f"sql_marks : {df['sql_marks'].mean()}")
+print(f"average sql_marks : {df['sql_marks'].mean()}")
 #Find average Pandas marks.
-print(f"pandas_marks: {df['pandas_marks'].mean()}")
+print(f"average pandas_marks: {df['pandas_marks'].mean()}")
 
 #Find maximum marks.
 print(f"Max Marks: {df.describe().max()}")
