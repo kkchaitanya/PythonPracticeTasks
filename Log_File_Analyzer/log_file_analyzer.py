@@ -1,7 +1,7 @@
 import pandas as pd
 
 df = pd.read_csv(
-        "Application.log",
+        "application.log",
         sep=" - ",
         names=["Level", "Message"],
         engine="python"
