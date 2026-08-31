@@ -4,7 +4,7 @@ df = pd.read_csv("products.csv")
 print(f"head {df.head()}")
 print(f"tail {df.tail()}")
 print(f"describe {df.describe()}")
-print(f"hinfoead {df.info()}")
+print(f"info {df.info()}")
 print(f"shape {df.shape}")
 print(f"columns {df.columns}")
 
@@ -28,23 +28,28 @@ print(df[df["price"]==df["price"].min()])
 print(df[df["price"]>50000])
 #Find products with rating greater than 4.
 df = df[df["rating"]>4]
+print(f"rating greater than {df}")
 #Sort products by price.
 df =  df.sort_values(["price"])
 #Sort products by rating.
 df =  df.sort_values(["rating"])
 #Find products with stock below 10.
 df= df[df["stock"]<10]
+print(f"stock less than 10: {df}")
 #Create discount_amount.
 df["discount_amount"] = df["price"] *df["discount"]/100
 #Create final_price.
 df["final_price"] = df["price"]- df["discount_amount"]
 
 #Find average price by category.
+print("Find average price by category.")
 print(df.groupby("category")["price"].mean())
+
 #Find average rating by brand.
+print("Find average rating by brand.")
 print(df.groupby("brand")["rating"].mean())
 #Find maximum product price category-wise.
+print("Find maximum product price category-wise.")
 print(df.groupby("category")["price"].max())
-
 print(df)
 df.to_csv("products_filter.csv", index=False)
