@@ -1,0 +1,12 @@
+Note 1: Python is easy to learn.
+Note 2: Files can store data permanently.
+Note 3: The open() function is used to open files.
+Note 4: The read() function reads file contents.
+Note 5: The write() function writes data to a file.
+Note 6: The append mode adds data to an existing file.
+Note 7: The close() function closes a file.
+Note 8: readline() reads one line at a time.
+Note 9: readlines() reads all lines into a list.
+Note 10: Python supports different file modes.
+Note 11: Always remember to close files.
+Note 12: The with open() statement closes files automatically.
