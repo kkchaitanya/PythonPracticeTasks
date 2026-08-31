@@ -1,0 +1,45 @@
+Create a raw text file
+
+sales.txt
+
+Format
+
+order_id,product,quantity,price,city
+
+101,Laptop,1,65000,Bangalore
+
+102,Mouse,2,1200,Delhi
+
+...
+
+Include at least 30 transactions.
+
+Perform
+
+Create/write the text file.
+
+Read it using normal Python file handling.
+
+Load the same data using Pandas.
+
+Convert it into a DataFrame.
+
+Calculate
+
+revenue = quantity * price
+
+Find total revenue.
+
+Find average order value.
+
+Find highest-value order.
+
+Find lowest-value order.
+
+Find revenue product-wise.
+
+Find revenue city-wise.
+
+Save processed data as
+
+sales_report.csv

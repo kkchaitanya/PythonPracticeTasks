@@ -1,0 +1,50 @@
+What to build
+Create
+
+Camera
+
+Methods
+
+take_photo()
+
+record_video()
+
+Create
+
+MusicPlayer
+
+Methods
+
+play_music()
+
+stop_music()
+
+Create
+
+GPS
+
+Methods
+
+current_location()
+
+navigate()
+
+Create
+
+SmartPhone(Camera, MusicPlayer, GPS)
+
+The SmartPhone should inherit functionality from all three classes.
+
+Add smartphone properties
+
+brand
+
+model
+
+price
+
+storage
+
+Create at least 3 smartphone objects.
+
+Explain how multiple inheritance works

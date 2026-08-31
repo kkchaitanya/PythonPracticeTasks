@@ -1,0 +1,52 @@
+What to build
+Create
+
+BankAccount
+
+|
+
+-----------------------
+
+| | |
+
+Savings Current Salary
+
+Account Account Account
+
+Parent class
+
+BankAccount
+
+Attributes
+
+account_number
+
+holder_name
+
+balance
+
+Methods
+
+deposit()
+
+display_balance()
+
+account_details()
+
+Child classes should contain different additional properties.
+
+SavingsAccount
+
+interest_rate
+
+CurrentAccount
+
+overdraft_limit
+
+SalaryAccount
+
+employer
+
+monthly_salary
+
+Create multiple objects and demonstrate inherited behavior.

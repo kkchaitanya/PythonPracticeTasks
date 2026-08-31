@@ -1,0 +1,40 @@
+What to build
+Create parent class
+
+Payment
+
+Method
+
+process_payment()
+
+Create child classes
+
+CreditCardPayment
+
+UPIPayment
+
+NetBankingPayment
+
+WalletPayment
+
+Every child class should override
+
+process_payment()
+
+Each implementation should print different payment processing information.
+
+Example
+
+Processing ₹5000 using UPI
+
+Processing ₹5000 using Credit Card
+
+Students must explain
+
+Method overriding
+
+Parent method
+
+Child implementation
+
+Runtime behavior
