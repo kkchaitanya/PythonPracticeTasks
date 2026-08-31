@@ -1,0 +1,47 @@
+Create a Python program using only the built-in file handling system
+
+open()
+
+read()
+
+write()
+
+append()
+
+close()
+
+Create a file
+
+notes.txt
+
+The program should demonstrate
+
+Creating the file.
+
+Writing at least 10 lines.
+
+Reading the entire file.
+
+Reading only a specific number of characters.
+
+Using readline().
+
+Using readlines().
+
+Appending additional notes.
+
+Reopening the file and displaying updated contents.
+
+Demonstrating different file modes
+
+r
+
+w
+
+a
+
+Demonstrate use of
+
+with open(...)
+
+Explain why with open() is preferred.
