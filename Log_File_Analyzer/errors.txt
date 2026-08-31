@@ -1,0 +1,6 @@
+Level	Message
+ERROR	Database connection failed
+ERROR	Payment service unavailable
+ERROR	Invalid authentication token
+ERROR	Email notification failed
+ERROR	File upload failed

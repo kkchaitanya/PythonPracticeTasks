@@ -10,6 +10,7 @@ print(df.head())
 #Count total log entries.
 print(f" total log entries : {len(df)}")
 #Count ERROR occurrences.
+print(f"ERROR DATA FRAME {df[df["Level"]=="ERROR"]}")
 print(f"ERROR occurrence: {df[df["Level"]=="ERROR"].count()}")
 #Count WARNING occurrences.
 print(f"WARNING occurrence: {df[df["Level"]=="WARNING"].count()}")
@@ -26,6 +27,7 @@ df_warning.to_csv("warnings.txt", sep="\t", index=False)
 
 ## meta data infor ##
 print(df.info())
+print("## describe ##")
 print(df.describe())
 print(df.head())
 print(df.tail())

@@ -1,0 +1,6 @@
+Level	Message
+WARNING	Memory usage high
+WARNING	Disk space running low
+WARNING	API response delayed
+WARNING	High CPU utilization detected
+WARNING	Unusual login attempt detected
