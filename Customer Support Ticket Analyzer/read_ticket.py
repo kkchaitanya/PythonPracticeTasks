@@ -9,27 +9,27 @@ print(df)
 print(f"total tickets:{len(df)} ")
 # Count tickets by category.
 #print(f"tickets by category: {df.groupby("category")["ticket_id"].count()}")
-print(f"tickets by category: {df.groupby("category").value_counts()}")
+print(f"tickets by category: {df.groupby('category').value_counts()}")
 # Count tickets by priority.
-print(f"tickets by priority: {df.groupby("priority").value_counts()}")
+print(f"tickets by priority: {df.groupby('priority').value_counts()}")
 # Count tickets by status.
-print(f"tickets by status: {df.groupby("status").value_counts()}")
+print(f"tickets by status: {df.groupby('status').value_counts()}")
 # Find open tickets.
-print(f"open tickets: {df[df["status"]=="Open"]}")
+print(f"open tickets: {df[df['status']=='Open']}")
 # Find critical tickets.
-print(f"critical tickets: {df[df["priority"]=="Critical"]}")
+print(f"critical tickets: {df[df['priority']=='Critical']}")
 # Find resolved tickets.
-print(f"resolved tickets: {df[df["status"]=="Resolved"]}")
+print(f"resolved tickets: {df[df['status']=='Resolved']}")
 # Find average resolution time.
-print(f"average resolution time: {df["resolution_time"].mean()}")
+print(f"average resolution time: {df['resolution_time'].mean()}")
 # Find average resolution time per category.
-print(f"average resolution time per category: {df.groupby("category")["resolution_time"].mean()}")
+print(f"average resolution time per category: {df.groupby('category')['resolution_time'].mean()}")
 # Find tickets handled by each support agent.
-print(f"tickets handled by each support agent: {df["assigned_agent"].value_counts()}")
+print(f"tickets handled by each support agent: {df['assigned_agent'].value_counts()}")
 # Sort tickets by resolution time.
-print(f" Sort tickets by resolution time: {df.sort_values("resolution_time",ascending=True)}")
+print(f" Sort tickets by resolution time: {df.sort_values('resolution_time',ascending=True)}")
 # Find tickets taking maximum resolution time.
-print(f"Find tickets taking maximum resolution time: {df[df["resolution_time"] == df["resolution_time"].max()]}")
+print(f"Find tickets taking maximum resolution time: {df[df['resolution_time'] == df['resolution_time'].max()]}")
 
 # Export summary report.
 
