@@ -15,11 +15,11 @@ print(f"tickets by priority: {df.groupby("priority").value_counts()}")
 # Count tickets by status.
 print(f"tickets by status: {df.groupby("status").value_counts()}")
 # Find open tickets.
-print(f"open tickets: {df[df["status"]==Status.OPEN]}")
+print(f"open tickets: {df[df["status"]=="Open"]}")
 # Find critical tickets.
-print(f"critical tickets: {df[df["priority"]==Priority.CRITICAL]}")
+print(f"critical tickets: {df[df["priority"]=="Critical"]}")
 # Find resolved tickets.
-print(f"resolved tickets: {df[df["status"]==Status.RESOLVED]}")
+print(f"resolved tickets: {df[df["status"]=="Resolved"]}")
 # Find average resolution time.
 print(f"average resolution time: {df["resolution_time"].mean()}")
 # Find average resolution time per category.
