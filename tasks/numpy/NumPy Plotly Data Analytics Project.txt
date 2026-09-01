@@ -1,0 +1,104 @@
+What to build
+Objective
+
+Use NumPy to process data and Plotly to visualize the results.
+
+Scenario
+
+You are working as a junior data analyst for an e-commerce company.
+
+Create fictional sales data for 12 months.
+
+Track
+
+Revenue
+
+Orders
+
+Customers
+
+Expenses
+
+Requirements
+
+1.
+
+Store monthly revenue using NumPy.
+
+2.
+
+Calculate total annual revenue.
+
+3.
+
+Calculate average monthly revenue.
+
+4.
+
+Find the best-performing month.
+
+5.
+
+Find the lowest-performing month.
+
+6.
+
+Calculate month-to-month revenue differences.
+
+7.
+
+Create a line chart showing revenue trends.
+
+8.
+
+Create a bar chart showing monthly orders.
+
+9.
+
+Create a comparison graph for
+
+Revenue
+
+Expenses
+
+10.
+
+Create customer-growth visualization.
+
+11.
+
+Calculate profit
+
+Profit = Revenue - Expenses
+
+and visualize monthly profit.
+
+12.
+
+Create one final visualization that you believe gives management the best understanding of company performance.
+
+Submission Instructions
+
+Create
+
+super30-numpy-plotly-analytics
+
+Students must clearly separate
+
+Data Generation
+
+↓
+
+NumPy Processing
+
+↓
+
+Analysis
+
+↓
+
+Plotly Visualization
+
+↓
+
+Insights

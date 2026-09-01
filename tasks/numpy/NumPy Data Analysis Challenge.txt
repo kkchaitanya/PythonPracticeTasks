@@ -1,0 +1,184 @@
+What to build
+Objective
+
+Build strong fundamentals with NumPy arrays and common numerical operations.
+
+Problems
+
+1
+Array Creation
+
+Create NumPy arrays containing
+
+Numbers 1–50
+
+Even numbers 2–100
+
+Odd numbers 1–99
+
+2
+Student Marks Analysis
+
+Create
+
+marks = np.array([
+
+78, 85, 92, 67, 88,
+
+73, 95, 60, 84, 91
+
+])
+
+Find
+
+Total marks
+
+Average
+
+Maximum
+
+Minimum
+
+Median
+
+3
+Filtering
+
+From the marks array, find students scoring
+
+Above 90
+
+Above average
+
+Below 70
+
+4
+Reshaping
+
+Create numbers 1–20 and reshape them into
+
+4 × 5
+
+5
+Two-Dimensional Array
+
+Create a 3×3 matrix and demonstrate
+
+Row selection
+
+Column selection
+
+Individual element selection
+
+6
+Mathematical Operations
+
+For
+
+a = np.array([10, 20, 30, 40, 50])
+
+b = np.array([5, 10, 15, 20, 25])
+
+perform
+
+Addition
+
+Subtraction
+
+Multiplication
+
+Division
+
+7
+Statistical Analysis
+
+Generate 100 random numbers and calculate
+
+Mean
+
+Median
+
+Standard deviation
+
+Variance
+
+8
+Sorting
+
+Create an unsorted NumPy array and display ascending and descending results.
+
+9
+Unique Values
+
+Given
+
+[1,2,2,3,3,3,4,5,5,6]
+
+find unique values.
+
+10
+Matrix Operations
+
+Create two 3×3 matrices and perform
+
+Addition
+
+Subtraction
+
+Element-wise multiplication
+
+Matrix multiplication
+
+11
+Salary Analysis
+
+Create salary data for 15 employees.
+
+Find
+
+Highest salary
+
+Lowest salary
+
+Average salary
+
+Employees earning above average
+
+12
+Challenge
+
+Generate a 5×5 random integer matrix and determine
+
+Maximum value
+
+Minimum value
+
+Row-wise sum
+
+Column-wise sum
+
+Overall average
+
+Submission Instructions
+
+Create a public GitHub repository
+
+super30-numpy-task-1
+
+The repository must contain all programs and a detailed README.md.
+
+Record a YouTube video explaining
+
+NumPy arrays
+
+Indexing
+
+Filtering
+
+Reshaping
+
+Statistical operations
+
+Matrix operations
+
+Do not simply read the code. Execute the programs and explain the outputs.
