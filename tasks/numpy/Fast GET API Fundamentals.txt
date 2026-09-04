@@ -1,0 +1,440 @@
+What to build
+Objective
+
+Create your first FastAPI application containing multiple GET endpoints.
+
+The objective of this task is to understand how APIs are created using FastAPI, how dynamic URL parameters work, and how JSON responses are returned.
+
+Requirements
+
+Create the following GET APIs.
+
+1
+Home API
+
+Endpoint
+
+GET /
+
+Return
+
+{
+
+"message": "Welcome to Super30 FastAPI"
+
+}
+
+2
+Student API
+
+Endpoint
+
+GET /student
+
+Return student information such as
+
+{
+
+"name": "Sudhanshu",
+
+"batch": "Super30",
+
+"role": "Student"
+
+}
+
+You can use your own student information.
+
+3
+Course API
+
+Endpoint
+
+GET /course
+
+Return information about the course.
+
+The response should contain
+
+Course name
+
+Mentor
+
+Duration
+
+Topics
+
+Example
+
+{
+
+"course_name": "Backend Development with FastAPI",
+
+"mentor": "Sudhanshu",
+
+"duration": "8 Weeks",
+
+"topics": [
+
+"Python",
+
+"FastAPI",
+
+"REST API",
+
+"Database",
+
+"Deployment"
+
+]
+
+}
+
+4
+Skills API
+
+Endpoint
+
+GET /skills
+
+Return a list of technical skills.
+
+Example
+
+{
+
+"skills": [
+
+"Python",
+
+"FastAPI",
+
+"SQL",
+
+"Docker",
+
+"AWS"
+
+]
+
+}
+
+5
+Addition API
+
+Example endpoint
+
+GET /add/10/20
+
+Return
+
+{
+
+"result": 30
+
+}
+
+The values must be dynamic.
+
+For example
+
+GET /add/50/25
+
+should return
+
+{
+
+"result": 75
+
+}
+
+Use dynamic FastAPI path parameters.
+
+Example
+
+@app.get("/add/{num1}/{num2}")
+
+6
+Multiplication API
+
+Example endpoint
+
+GET /multiply/5/8
+
+Return the multiplication result.
+
+Example
+
+{
+
+"result": 40
+
+}
+
+The values must be dynamic.
+
+7
+Square API
+
+Example endpoint
+
+GET /square/9
+
+Return
+
+{
+
+"number": 9,
+
+"square": 81
+
+}
+
+The number must be supplied dynamically through the URL.
+
+8
+Even/Odd API
+
+Example endpoint
+
+GET /check/17
+
+Return whether the supplied number is even or odd.
+
+Example
+
+{
+
+"number": 17,
+
+"type": "odd"
+
+}
+
+For
+
+GET /check/20
+
+the response should be
+
+{
+
+"number": 20,
+
+"type": "even"
+
+}
+
+9
+Age API
+
+Example endpoint
+
+GET /age/25
+
+Return a meaningful message based on the supplied age.
+
+Example
+
+{
+
+"age": 25,
+
+"message": "You are an adult."
+
+}
+
+You may create your own conditions, such as
+
+Child
+
+Teenager
+
+Adult
+
+Senior citizen
+
+10
+Table API
+
+Example endpoint
+
+GET /table/7
+
+Return the multiplication table of the supplied number.
+
+Example
+
+{
+
+"number": 7,
+
+"table": [
+
+"7 x 1 = 7",
+
+"7 x 2 = 14",
+
+"7 x 3 = 21",
+
+"7 x 4 = 28",
+
+"7 x 5 = 35",
+
+"7 x 6 = 42",
+
+"7 x 7 = 49",
+
+"7 x 8 = 56",
+
+"7 x 9 = 63",
+
+"7 x 10 = 70"
+
+]
+
+}
+
+The number must be dynamic.
+
+11
+Profile API
+
+Example endpoint
+
+GET /profile/Sudhanshu/37
+
+Return
+
+{
+
+"name": "Sudhanshu",
+
+"age": 37
+
+}
+
+Both the name and age must be dynamic.
+
+Example route
+
+@app.get("/profile/{name}/{age}")
+
+12
+Number Analysis API
+
+Example endpoint
+
+GET /number/25
+
+Return
+
+{
+
+"number": 25,
+
+"square": 625,
+
+"cube": 15625,
+
+"even": false
+
+}
+
+The number must be dynamic.
+
+Example
+
+GET /number/10
+
+should return
+
+{
+
+"number": 10,
+
+"square": 100,
+
+"cube": 1000,
+
+"even": true
+
+}
+
+Project Name
+
+Create a GitHub repository named
+
+super30-fastapi-get-api-task
+
+Important Instructions
+
+Only GET APIs should be implemented in this assignment.
+
+Do not use
+
+POST
+
+PUT
+
+PATCH
+
+DELETE
+
+Students Must Understand
+
+By completing this assignment, students should understand
+
+FastAPI application creation
+
+Installing FastAPI
+
+Installing Uvicorn
+
+FastAPI()
+
+@app.get()
+
+Route functions
+
+Static routes
+
+Dynamic URL parameters
+
+Path parameters
+
+Type hints
+
+Returning Python dictionaries as JSON
+
+Running FastAPI locally
+
+Testing API endpoints
+
+FastAPI Swagger documentation
+
+FastAPI ReDoc documentation
+
+Running the Application
+
+The application should be runnable using
+
+uvicorn main:app --reload
+
+The API should normally be accessible at
+
+http://127.0.0.1:8000
+
+FastAPI Swagger Documentation
+
+Students must also open
+
+http://127.0.0.1:8000/docs
+
+They should understand that FastAPI automatically generates interactive Swagger API documentation.
+
+Also explore
+
+http://127.0.0.1:8000/redoc
+
+Testing Requirements

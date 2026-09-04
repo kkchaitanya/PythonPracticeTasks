@@ -1,0 +1,141 @@
+What to build
+Objective
+
+Combine NumPy with Flask GET APIs.
+
+Create a small Numerical Analysis API.
+
+Required APIs
+
+1.
+
+GET /numbers
+
+Return the NumPy array being analyzed.
+
+2.
+
+GET /mean
+
+Return its mean.
+
+3.
+
+GET /median
+
+Return its median.
+
+4.
+
+GET /std
+
+Return standard deviation.
+
+5.
+
+GET /variance
+
+Return variance.
+
+6.
+
+GET /maximum
+
+Return maximum.
+
+7.
+
+GET /minimum
+
+Return minimum.
+
+8.
+
+GET /sum
+
+Return total.
+
+9.
+
+GET /even
+
+Return all even numbers.
+
+10.
+
+GET /odd
+
+Return all odd numbers.
+
+11.
+
+Create
+
+GET /stats
+
+Return everything together
+
+{
+
+"mean": 0,
+
+"median": 0,
+
+"standard_deviation": 0,
+
+"variance": 0,
+
+"maximum": 0,
+
+"minimum": 0
+
+}
+
+Use actual calculated values.
+
+12
+Dynamic Challenge
+
+Create
+
+GET /table/15
+
+Use NumPy to generate and return the multiplication table dynamically.
+
+Submission Instructions
+
+Create
+
+super30-flask-numpy-api
+
+Do not hard-code calculated answers.
+
+For example, this is NOT acceptable
+
+return {"mean": 25}
+
+The result must be calculated using NumPy.
+
+The YouTube explanation must clearly show
+
+GET Request
+
+↓
+
+Flask Route
+
+↓
+
+Python Function
+
+↓
+
+NumPy Calculation
+
+↓
+
+JSON Response
+
+Demonstrate all major endpoints.
+
+Submit
