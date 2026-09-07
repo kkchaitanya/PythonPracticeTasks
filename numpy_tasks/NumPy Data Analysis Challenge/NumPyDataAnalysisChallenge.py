@@ -37,9 +37,13 @@ print(f"Median marks: {np.median(marks)}")
 #Above 90
 print("## Above 90 ##")
 print(marks[marks>90])
+print("## below 90 ##")
+print(marks[marks<90])
 #Above average
 print("## Above average ##")
 print(marks[marks>marks.mean()])
+print("## Below average ##")
+print(marks[marks<marks.mean()])
 #Below 70
 print("## Below 70 ##")
 print(marks[marks<70])
@@ -95,7 +99,7 @@ print("Subtraction", a-b)
 ## Multiplication
 print("Multiplication", a*b)
 ## Division
-print("Multiplication", a/b)
+print("division", a/b)
 
 
 ##Statistical Analysis
@@ -106,7 +110,8 @@ print("Multiplication", a/b)
 ##Variance
 
 random_numbers = np.random.randint(1,1000,100)
-
+print("random_numbers",random_numbers)
+print("random_numbers",len(random_numbers))
 print("Mean",np.mean(random_numbers))
 print("Median",np.median(random_numbers))
 print("Standard deviation",np.std(random_numbers))
@@ -165,7 +170,7 @@ print("Lowest salary",salaries.min())
 print("Average salary",salaries.mean())
 # Employees earning above average
 print("Employees earning above average",salaries[salaries>salaries.mean()])
-
+print("Employees earning below average",salaries[salaries<salaries.mean()])
 
 # Generate a 5×5 random integer matrix and determine
 random_55=  np.random.randint(1,100,(5,5))
@@ -175,9 +180,9 @@ print("Maximum value",random_55.max())
 print("Maximum value",random_55.max(axis=1))
 # Minimum value
 print("Minimum value",random_55.min())
-print("Maximum value",random_55.max(axis=0))
+print("Maximum value column",random_55.max(axis=0))
 # Row-wise sum
-print("Row-wise sum",random_55.sum(axis=1))
+print("Row-wise sum",random_55.sum(axis=0))
 # Column-wise sum
 print("Column-wise sum",random_55.sum(axis=1))
 # Overall average
