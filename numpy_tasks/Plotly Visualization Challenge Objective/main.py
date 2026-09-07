@@ -78,7 +78,7 @@ histogram = px.histogram(
                          nbins=20, 
                          title="Histogram of 500 Random Values", 
                          labels={ "x": "Random Values", "y": "Frequency" } ) 
-fig.show(renderer="browser")
+histogram.show(renderer="browser")
 
 
 # Salary information for 30 employees 
@@ -86,7 +86,7 @@ salaries = [ 25000, 28000, 30000, 32000, 35000, 36000, 38000, 40000, 42000, 4500
             72000, 75000, 80000, 85000, 90000, 95000, 100000, 120000 ] 
 salaries = px.box( y=salaries, title="Salary Distribution of 30 Employees",
                    labels={ "y": "Salary" } ) 
-fig.show(renderer="browser")
+salaries.show(renderer="browser")
 
 
 # Student Performance
