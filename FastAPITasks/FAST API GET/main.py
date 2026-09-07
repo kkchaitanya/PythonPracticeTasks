@@ -63,7 +63,7 @@ def read_square(number: int ):
 def read_check(number: int ):
     return {
             "number": number,
-            "square": "Even" if number % 2 == 0 else "Odd"
+            "type": "Even" if number % 2 == 0 else "Odd"
             }
 
 @app.get("/age/{age}")
