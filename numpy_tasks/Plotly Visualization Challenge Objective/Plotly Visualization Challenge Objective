@@ -1,0 +1,140 @@
+What to build
+Objective
+
+Convert raw data into meaningful interactive visualizations using Plotly.
+
+Problems
+
+1
+Bar Chart
+
+Create monthly sales
+
+months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
+
+sales = [120, 150, 170, 140, 200, 230]
+
+Create a bar chart.
+
+2
+Line Chart
+
+Represent the same monthly sales as a line chart.
+
+3
+Pie Chart
+
+Create department-wise employee distribution
+
+Engineering = 40
+
+Sales = 25
+
+Marketing = 15
+
+HR = 10
+
+Operations = 10
+
+4
+Scatter Plot
+
+Create a relationship between
+
+Hours studied
+
+Exam marks
+
+for at least 15 students.
+
+5
+Histogram
+
+Generate 500 random values using NumPy and create a histogram.
+
+6
+Box Plot
+
+Create salary information for 30 employees and visualize salary distribution.
+
+7
+Multiple Categories
+
+Create a chart comparing sales of
+
+Laptop
+
+Mobile
+
+Tablet
+
+across six months.
+
+8
+Student Performance
+
+Create marks for 10 students in
+
+Python
+
+Mathematics
+
+Data Science
+
+Represent the comparison visually.
+
+9
+3D Scatter Plot
+
+Create at least 30 data points containing
+
+Age
+
+Salary
+
+Experience
+
+Represent them using a Plotly 3D scatter plot.
+
+10
+Custom Graph
+
+Take any real-world dataset created by you and generate an appropriate visualization.
+
+11
+NumPy + Plotly
+
+Generate 100 random numbers using NumPy and visualize them with Plotly.
+
+12
+Dashboard Thinking Challenge
+
+Create at least four separate charts representing a fictional company's:
+
+Revenue
+
+Expenses
+
+Employees
+
+Customers
+
+Submission Instructions
+
+Create
+
+super30-plotly-task-2
+
+Every graph must have
+
+Proper title
+
+X-axis label
+
+Y-axis label where applicable
+
+Legend where required
+
+Meaningful data
+
+Clean presentation
