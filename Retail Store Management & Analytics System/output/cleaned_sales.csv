@@ -1,0 +1,51 @@
+transaction_id,product_id,product_name,category,quantity,price,customer_city,payment_method,total_revenue
+1,C23,TShirt23,Clothing,1,1930,Bangalore,Net Banking,1930
+2,C22,TShirt22,Clothing,1,1216,Delhi,Net Banking,1216
+3,E5,Laptop5,Electronics,4,61564,Chennai,UPI,246256
+4,E7,Laptop7,Electronics,3,57014,Bangalore,UPI,171042
+5,C8,TShirt8,Clothing,4,1378,Delhi,UPI,5512
+6,B9,Book9,Books,4,1125,Chennai,Net Banking,4500
+7,E6,Laptop6,Electronics,2,55674,Chennai,Net Banking,111348
+8,C3,TShirt3,Clothing,2,2199,Mumbai,UPI,4398
+9,E2,Laptop2,Electronics,4,69955,Bangalore,Card,279820
+10,B10,Book10,Books,1,1027,Hyderabad,UPI,1027
+11,C6,TShirt6,Clothing,3,2936,Chennai,UPI,8808
+12,C2,TShirt2,Clothing,4,2293,Mumbai,Card,9172
+13,C20,TShirt20,Clothing,1,873,Mumbai,UPI,873
+14,E2,Laptop2,Electronics,1,69955,Mumbai,Cash,69955
+15,C21,TShirt21,Clothing,5,1864,Chennai,Card,9320
+16,C22,TShirt22,Clothing,5,1216,Delhi,UPI,6080
+17,B4,Book4,Books,2,487,Mumbai,UPI,974
+18,C3,TShirt3,Clothing,1,2199,Mumbai,Net Banking,2199
+19,E2,Laptop2,Electronics,4,69955,Mumbai,UPI,279820
+20,E1,Laptop1,Electronics,5,40551,Delhi,UPI,202755
+21,E2,Laptop2,Electronics,4,69955,Chennai,Net Banking,279820
+22,B3,Book3,Books,5,500,Mumbai,Cash,2500
+23,B9,Book9,Books,4,1125,Mumbai,Net Banking,4500
+24,C18,TShirt18,Clothing,4,820,Bangalore,Net Banking,3280
+25,C21,TShirt21,Clothing,1,1864,Delhi,Card,1864
+26,E3,Laptop3,Electronics,5,68143,Mumbai,Cash,340715
+27,E10,Laptop10,Electronics,5,67218,Hyderabad,Cash,336090
+28,E3,Laptop3,Electronics,3,68143,Delhi,UPI,204429
+29,B8,Book8,Books,1,830,Delhi,Card,830
+30,C17,TShirt17,Clothing,3,796,Bangalore,UPI,2388
+31,C16,TShirt16,Clothing,5,1683,Hyderabad,Card,8415
+32,E3,Laptop3,Electronics,4,68143,Chennai,UPI,272572
+33,B4,Book4,Books,3,487,Mumbai,Net Banking,1461
+34,B5,Book5,Books,2,1282,Chennai,UPI,2564
+35,E2,Laptop2,Electronics,4,69955,Chennai,Cash,279820
+36,C19,TShirt19,Clothing,2,555,Bangalore,Net Banking,1110
+37,C20,TShirt20,Clothing,3,873,Bangalore,UPI,2619
+38,E5,Laptop5,Electronics,3,61564,Mumbai,Card,184692
+39,C1,TShirt1,Clothing,5,1242,Chennai,UPI,6210
+40,C7,TShirt7,Clothing,4,1000,Bangalore,Cash,4000
+41,C6,TShirt6,Clothing,1,2936,Hyderabad,UPI,2936
+42,C4,TShirt4,Clothing,3,1693,Bangalore,UPI,5079
+43,B9,Book9,Books,1,1125,Delhi,UPI,1125
+44,E8,Laptop8,Electronics,5,50495,Mumbai,Cash,252475
+45,B1,Book1,Books,3,1120,Bangalore,UPI,3360
+46,C3,TShirt3,Clothing,3,2199,Mumbai,Cash,6597
+47,C17,TShirt17,Clothing,5,796,Bangalore,Cash,3980
+48,E8,Laptop8,Electronics,4,50495,Chennai,Net Banking,201980
+49,B6,Book6,Books,1,558,Bangalore,Card,558
+50,C1,TShirt1,Clothing,3,1242,Delhi,Net Banking,3726

@@ -1,0 +1,19 @@
+
+    RETAIL STORE SALES REPORT
+
+    Total Transactions : 50
+
+    Total Revenue : 3,838,700.00
+
+    Average Transaction Value :
+    76,774.00
+
+    Best Selling Product :
+    Laptop2
+
+    Highest Revenue Category :
+    Electronics
+
+    Highest Revenue City :
+    Chennai
+    
