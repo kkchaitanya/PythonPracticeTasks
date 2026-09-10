@@ -1,5 +1,4 @@
 from fastapi import FastAPI,Request
-from flask import jsonify
 from students import students,get_overall_average
 import numpy as np
 import plotly.graph_objects as go
@@ -9,7 +8,6 @@ from fastapi.templating import Jinja2Templates
 app = FastAPI()
 
 students_list = students
-templates = Jinja2Templates(directory="templates")
 
 @app.get("/students")
 def read_students():
@@ -125,13 +123,5 @@ def statistics():
         )
     }
 
-# from fastapi import FastAPI, Request
-# from fastapi.templating import Jinja2Templates
-# import numpy as np
-# import plotly.graph_objects as go
-
-# app = FastAPI()
-
-# templates = Jinja2Templates(directory="templates")
 
 
