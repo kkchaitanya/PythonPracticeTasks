@@ -1,0 +1,25 @@
+Build a Course API with FastAPI + Pydantic
+
+
+What to build
+Create a Course Management Backend using FastAPI.
+
+Define proper Pydantic models for
+
+CourseCreate
+
+CourseUpdate
+
+CourseResponse
+
+Each course should contain fields such as course ID, title, description, price, duration, instructor, category, rating, and active status.
+
+Implement validation such as price > 0, valid ratings, minimum title length, and required fields.
+
+Add filtering APIs such as
+
+GET /courses?category=python
+
+GET /courses?min_price=500&max_price=5000
+
+GET /courses?active=true
