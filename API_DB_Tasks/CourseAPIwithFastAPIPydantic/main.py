@@ -1,6 +1,7 @@
 from typing import Optional
 from fastapi import FastAPI,HTTPException,status
 from pydantic import BaseModel, EmailStr, Field
+import uvicorn
 
 
 # 1. Initialize the FastAPI app
@@ -66,9 +67,77 @@ def get_course(course_id: str):
             detail="Course not found."
         )
     return courses_db[course_id]
+@app.get("/courses")
+def get_course():
+    return courses_db
 
 # 4. GET Endpoint to fetch a course by ID
-@app.get("/courses/", response_model=Course)
-def get_course(category: str):
-    courses_db[courses_db["category"]]
-    return courses_db[course_id]
+# @app.get("/courses/")
+# def get_category(category: str):
+#    filter_cat = {
+#     cat_id: item 
+#     for cat_id, item in courses_db.items() 
+#     if item.category.lower() == category.lower()
+#             }
+#    return filter_cat
+
+# @app.get("/courses/")
+# def get_category(category:Optional[str] = None,active: Optional[bool]=None):
+# #    filter_cat = {
+# #     cat_id: item 
+# #     for cat_id, item in courses_db.items() 
+# #         item.category.lower() == category.lower()
+# #             }
+#    filtered_courses = {}
+#    for cat_id, item in courses_db.items():
+#         # Check category match if category parameter is provided
+#         match_cat = (category is None) or (item.category.lower() == category.lower())
+#         # Check active status match if active parameter is provided
+#         match_active = (active is None) or (item.active_status == active)
+#         print(match_cat)
+#         print(match_active)
+#         if match_cat and match_active:
+#             filtered_courses[cat_id] = item
+#    return filtered_courses
+
+@app.get("/courses/")
+def get_courses(
+    category: Optional[str] = None, 
+    active: Optional[bool] = None,
+    min_price: Optional[float] = None,
+    max_price: Optional[float] = None
+):
+    filtered_courses = {}
+    
+    for cat_id, item in courses_db.items():
+        # 1. Category Filter
+        if category and item.category.lower() != category.lower():
+            continue
+            
+        # 2. Active Status Filter
+        if active is not None and item.active_status != active:
+            continue
+            
+        # 3. Minimum Price Filter
+        if min_price is not None and item.price < min_price:
+            continue
+            
+        # 4. Maximum Price Filter
+        if max_price is not None and item.price > max_price:
+            continue
+            
+        # If the item passes all active checks, add it to the results
+        filtered_courses[cat_id] = item
+            
+    return filtered_courses
+
+@app.get("/active_courses/")
+def get_course(active: bool):
+   filter_cat = {
+    cat_id: item 
+    for cat_id, item in courses_db.items() 
+    if item.active_status == active
+            }
+   return filter_cat
+# if __name__ == "__main__":
+#     uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
