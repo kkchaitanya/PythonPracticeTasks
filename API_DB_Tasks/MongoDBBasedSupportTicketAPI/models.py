@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import List
+from typing import List, Optional
 from pydantic import BaseModel, EmailStr, Field
 from enum import Enum
 
@@ -45,3 +45,9 @@ class TicketCreate(BaseModel):
     # status:TicketStatus
     # status:str
 
+class TicketUpdate(BaseModel):
+    title: Optional[str] = Field(..., min_length=3, max_length=100)
+    description: Optional[str] = Field(..., min_length=10)
+    category: Optional[TicketCategory]
+    priority: Optional[TicketPriority]
+    tags: Optional[List[str]]

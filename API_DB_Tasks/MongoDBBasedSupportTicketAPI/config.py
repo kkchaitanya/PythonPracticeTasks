@@ -13,4 +13,4 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
-print(settings.MONGODB_URI)
+# print(settings.MONGODB_URI)

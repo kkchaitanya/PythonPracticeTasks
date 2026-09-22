@@ -5,7 +5,7 @@ from datetime import datetime
 from bson import ObjectId
 from fastapi import FastAPI, HTTPException,status
 from databe import *
-from models import TicketCreate, TicketStatus
+from models import TicketCreate, TicketStatus, TicketUpdate
 
 app = FastAPI(title=" MongoDB-Based Support Ticket API")
 
@@ -27,7 +27,24 @@ async def create_ticket(ticketCreate: TicketCreate):
             status_code=status.HTTP_400_BAD_REQUEST, 
             detail=f"Database operational failure: {str(e)}"
         )
-    
+@app.delete("/tickets/")
+async def delete_ticket(ticket_id:str):
+    ticket = await ticket_collection.find_one(
+            {"_id": ObjectId(ticket_id)}
+        )
+    if not ticket:
+            raise HTTPException(
+                status_code=404,
+                detail="Ticket not found"
+            )
+    status=await ticket_collection.delete_one(ticket)
+    return {
+        "deleted_count": status.deleted_count
+            }
+@app.put("tickets")
+async def update_tickets(ticketUpdate:TicketUpdate):
+    pass
+
 @app.get("/tickets")
 async def get_tickets():
     tickets = await ticket_collection.find().to_list(length=None)
