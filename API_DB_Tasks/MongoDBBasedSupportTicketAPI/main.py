@@ -40,11 +40,49 @@ async def delete_ticket(ticket_id:str):
     status=await ticket_collection.delete_one(ticket)
     return {
         "deleted_count": status.deleted_count
-            }
-@app.put("tickets")
-async def update_tickets(ticketUpdate:TicketUpdate):
-    pass
 
+            }
+
+@app.patch("/tickets/{ticket_id}/statuss")
+async def update_status(ticket_id: str,status:TicketStatus):
+    result = await ticket_collection.update_one(
+            {"_id": ObjectId(ticket_id)},
+            {
+            "$set": {
+            "status": status.value,
+            "updated_at": datetime.utcnow()
+            }
+            }
+            )
+    if result.matched_count == 0:
+        raise HTTPException(
+        status_code=404,
+        detail="Ticket not found"
+        )
+    return {
+        "message": "Status updated successfully"
+    }
+@app.put("tickets/{ticket_id}")
+async def update_tickets(ticket_id:str,ticketUpdate:TicketUpdate):
+        update_data = ticketUpdate.model_dump(exclude_none=True)
+        if not update_data:
+            raise HTTPException(
+            status_code=400,
+            detail="No fields provided for update"
+            )
+        update_data["updated_at"] = datetime.utcnow()
+        result = await ticket_collection.update_one(
+                {"_id": ObjectId(ticket_id)},
+                {"$set": update_data}
+                )
+        if result.matched_count == 0:
+            raise HTTPException(
+            status_code=404,
+            detail="Ticket not found"
+            )
+        return {
+        "message": "Ticket updated successfully"
+        }
 @app.get("/tickets")
 async def get_tickets():
     tickets = await ticket_collection.find().to_list(length=None)

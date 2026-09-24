@@ -13,7 +13,14 @@ Build a Customer Support/Ticket Management API using FastAPI + MongoDB.
 A ticket should contain data such as customer details, title, description, category, 
 priority, status, comments, tags, created date, and updated date.
 
-Create APIs for ticket creation, retrieval, updates, deletion, adding comments, changing status, filtering by priority/status, and searching tickets.
+Create APIs for ticket creation, 
+retrieval, 
+updates,
+ deletion, 
+ adding comments, 
+ changing status,
+  filtering by priority/status, 
+  and searching tickets.
 
 Use MongoDB's document structure properly—for example, 
 comments/tags can be nested rather than designing MongoDB exactly like SQL.
