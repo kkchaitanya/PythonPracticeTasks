@@ -16,7 +16,14 @@ Version A: FastAPI + Neon PostgreSQL
 
 Version B: FastAPI + MongoDB
 
-Both versions should support the same operations: create project, create task, assign task, update status, retrieve tasks, filter tasks, and delete tasks.
+Both versions should support the same operations: 
+create project, 
+create task, 
+assign task, 
+update status,
+ retrieve tasks, 
+ filter tasks, and
+ delete tasks.
 
 Then prepare a comparison covering schema, relationships, querying, flexibility, normalization, scalability, and development experience.
 
