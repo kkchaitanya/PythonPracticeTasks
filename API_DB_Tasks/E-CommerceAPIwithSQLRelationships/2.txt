@@ -19,7 +19,10 @@ order_items
 
 Implement relationships correctly.
 
-Create APIs where a user can create an account, view products, place an order, view their orders, update product inventory, and cancel an order.
+Create APIs where a user can create an account, view products, 
+place an order, 
+view their orders, 
+update product inventory, and cancel an order.
 
 When an order is created, calculate
 
