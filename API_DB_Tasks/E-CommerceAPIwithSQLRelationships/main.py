@@ -65,7 +65,7 @@ async def create_product(productCreat:ProductCreate,db: AsyncSession = Depends(g
                 detail=f"Database operational failure: {str(e)}")
 
 @app.get("/products/{product_name}")
-async def get_users(product_name:str=None,db: AsyncSession = Depends(get_db)):
+async def get_products(product_name:str=None,db: AsyncSession = Depends(get_db)):
     try:
          query = select(Product)
          if product_name:
