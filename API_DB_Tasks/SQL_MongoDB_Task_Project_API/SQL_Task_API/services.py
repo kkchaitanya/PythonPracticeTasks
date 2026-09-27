@@ -21,12 +21,22 @@ async def create_task(db: AsyncSession,task_data: TaskCreate):
 async def filter(db: AsyncSession,status:str,priority:Priority,assinged_to:str):
        query = select(Task)
 
-    #    if status:
-    #     query = query.where(Task.status == status)
-    #    if priority:
-    #     query = query.where(Task.priority == priority)
-    #    if assinged_to:
-    #     query = query.where(Task.assigned_to == assinged_to)
+       if status:
+        query = query.where(Task.status == status)
+       if priority:
+        query = query.where(Task.priority == priority)
+       if assinged_to:
+        query = query.where(Task.assigned_to == assinged_to)
 
        result = await db.execute(query)
        return result.scalars().all()
+
+async def delete_task(db: AsyncSession,task_id:str):
+      result = await db.execute(select(Task).where(Task.id == task_id))
+      task = result.scalar_one_or_none()
+      if not task:
+              return "Task Not Found"
+      await db.delete(task)
+      await db.commit()
+      return f"Task: {task_id} deleted"
+

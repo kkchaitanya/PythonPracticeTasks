@@ -102,3 +102,9 @@ async def get_task(status:TaskStatus=None):
                 status_code=status.HTTP_400_BAD_REQUEST, 
                 detail=f"Database operational failure: {str(e)}"
             )
+@app.delete("/delete_taask/")    
+async def delete_ticket(ticket_id: str):
+    result = await tasks.delete_one({"_id": ObjectId(ticket_id)})
+    if result.deleted_count == 0:
+        raise HTTPException(status_code=404, detail="Ticket not found")
+    return None
