@@ -62,7 +62,7 @@ async def update_status(ticket_id: str,status:TicketStatus):
     return {
         "message": "Status updated successfully"
     }
-@app.put("tickets/{ticket_id}")
+@app.put("/tickets/{ticket_id}")
 async def update_tickets(ticket_id:str,ticketUpdate:TicketUpdate):
         update_data = ticketUpdate.model_dump(exclude_none=True)
         if not update_data:
