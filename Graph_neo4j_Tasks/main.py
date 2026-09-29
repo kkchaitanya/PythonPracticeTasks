@@ -120,6 +120,107 @@ with driver.session() as session:
     session.run(create_query)
     session.run(relationship_query)
 
+# Read Data
+# Get All Students
+
+query = """
+MATCH (s:Student)
+RETURN s.name AS student
+"""
+
+with driver.session() as session:
+    result = session.run(query)
+
+    for record in result:
+        print(record["student"])
+
+## Get Courses for Alice ##
+query = """
+MATCH (s:Student {name:'Alice'})-[:ENROLLED_IN]->(c:Course)
+RETURN c.title AS course
+"""
+
+with driver.session() as session:
+    result = session.run(query)
+
+    for row in result:
+        print(row["course"])
+
+##Update Data
+# Rename Alice
+query = """
+MATCH (s:Student {name:'Alice'})
+SET s.name='Alice Johnson'
+RETURN s
+"""
+
+with driver.session() as session:
+    session.run(query)
+
+print("Student updated")
+
+### Add New Enrollment
+query = """
+MATCH (s:Student {name:'Diana'})
+MATCH (c:Course {title:'Machine Learning'})
+MERGE (s)-[:ENROLLED_IN]->(c)
+"""
+
+with driver.session() as session:
+    session.run(query)
+
+print("Enrollment added")
+
+# Delete Data
+# Delete Relationship
+
+query = """
+MATCH (s:Student {name:'Bob'})-[r:INTERESTED_IN]->(:Company {name:'Google'})
+DELETE r
+"""
+
+with driver.session() as session:
+    session.run(query)
+
+print("Relationship deleted")
+
+##Delete Project
+query = """
+MATCH (p:Project {name:'Portfolio Website'})
+DETACH DELETE p
+"""
+
+with driver.session() as session:
+    session.run(query)
+
+print("Project deleted")
+
+## Display Complete Graph
+query = """
+MATCH (n)-[r]->(m)
+RETURN n,r,m
+"""
+
+with driver.session() as session:
+    result = session.run(query)
+
+    for row in result:
+        print(row)
+
+##Count Nodes and Relationships
+with driver.session() as session:
+
+    node_count = session.run(
+        "MATCH (n) RETURN count(n) AS nodes"
+    ).single()["nodes"]
+
+    rel_count = session.run(
+        "MATCH ()-[r]->() RETURN count(r) AS rels"
+    ).single()["rels"]
+
+print(f"Nodes: {node_count}")
+print(f"Relationships: {rel_count}")
+
 print("Graph created successfully!")
 
 driver.close()
