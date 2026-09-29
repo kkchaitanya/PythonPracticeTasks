@@ -87,7 +87,7 @@ def create_Job(tx, job):
         name: $name,
     })
     """
-    tx.run(query, parameters=skill)
+    tx.run(query, parameters=job)
 with db.driver.session() as session:
     for job in jobs_df:
         session.execute_write(
@@ -101,7 +101,7 @@ MERGE (c)-[:REQUIRES]->(s)
 """
 session.run(
     query,
-    candidate_id="J001",
+    Id="J001",
     skill=".NET"
 )      
 
@@ -113,3 +113,70 @@ with db.driver.session() as session:
     result = session.run(query)
     for row in result:
         print(row)
+####################
+#####################
+companies_df= pd.read_csv('companies.csv')
+
+def create_companies_df(tx, companies):
+    query = """
+    CREATE (s:Companies {
+        companie_Id: $Id,
+        name: $name,
+    })
+    """
+    tx.run(query, parameters=companies)
+with db.driver.session() as session:
+    for cmp in companies_df:
+        session.execute_write(
+            create_companies_df,
+            cmp
+        )
+query = """
+MATCH (c:Jobs {Job_Id: $Id})
+MATCH (s:Companies {name: $name})
+MERGE (c)-[:POSTED_BY]->(s)
+"""
+session.run(
+    query,
+    Id="J001",
+    name="Microsoft"
+)     
+
+query = """
+MATCH (c:Jobs {Job_Id:'J001'})-[:REQUIRES]->(s:Companies)
+RETURN s.name AS Companie,c.name as Job_name
+"""
+with db.driver.session() as session:
+    result = session.run(query)
+    for row in result:
+        print(row)
+
+##################
+##################
+locations_df= pd.read_csv('locations.csv')
+
+def create_locations_df(tx, location):
+    query = """
+    CREATE (s:Locations {
+        Location_Id: $Id,
+        name: $name,
+    })
+    """
+    tx.run(query, parameters=location)
+with db.driver.session() as session:
+    for cmp in locations_df:
+        session.execute_write(
+            create_locations_df,
+            cmp
+        )
+
+query = """
+MATCH (c:Locations {Location_Id: $Id})
+MATCH (s:Companies {name: $name})
+MERGE (c)-[:POSTED_BY]->(s)
+"""
+session.run(
+    query,
+    Id="LOC001",
+    name="Microsoft"
+)     
