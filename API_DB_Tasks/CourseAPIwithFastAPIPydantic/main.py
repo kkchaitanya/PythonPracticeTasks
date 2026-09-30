@@ -46,7 +46,7 @@ def create_course(course: Course):
     return course
 
 @app.put("/courses/", status_code=status.HTTP_202_ACCEPTED, response_model=Course)
-def create_course(course: Course):
+def update_course(course: Course):
     # Check if course ID already exists
     if course.course_id not in courses_db:
         raise HTTPException(
