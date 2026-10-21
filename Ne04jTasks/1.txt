@@ -1,0 +1,37 @@
+Build Your First Neo4j Graph
+
+How this is marked
+What to build
+Create a graph representing a learning platform.
+
+Create nodes such as
+
+Student
+
+Course
+
+Mentor
+
+Skill
+
+Project
+
+Company
+
+Create meaningful relationships such as
+
+(Student)-[:ENROLLED_IN]->(Course)
+
+(Mentor)-[:TEACHES]->(Course)
+
+(Course)-[:TEACHES_SKILL]->(Skill)
+
+(Student)-[:BUILT]->(Project)
+
+(Project)-[:USES]->(Skill)
+
+(Student)-[:INTERESTED_IN]->(Company)
+
+Create at least 20 nodes and 25 relationships.
+
+Write Cypher queries to create, read, update, and delete data and demonstrate the resulting graph.

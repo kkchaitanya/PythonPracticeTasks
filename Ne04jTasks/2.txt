@@ -1,0 +1,55 @@
+Design a Supply Chain Knowledge Graph
+Due 9/28/2026, 11:29:00 AM · 25 marks
+
+How this is marked
+
+Code, reviewed automatically against the requirements
+15
+Video explanation, watched and reviewed against your code
+10
+What to build
+Build a mini supply-chain graph inspired by a real-world supplier-risk problem.
+
+Use entities such as
+
+Supplier
+
+Component
+
+Product
+
+Plant
+
+Shipment
+
+Country
+
+Create relationships such as
+
+Supplier → SUPPLIES → Component
+
+Component → USED_IN → Product
+
+Product → MANUFACTURED_AT → Plant
+
+Supplier → LOCATED_IN → Country
+
+Shipment → CONTAINS → Component
+
+Shipment → DESTINED_FOR → Plant
+
+Also introduce a Tier-2 relationship, where one supplier supplies another supplier.
+
+Then write queries that answer questions such as
+
+Which products depend on Supplier A?
+
+Which plants could be affected if Component X becomes unavailable?
+
+Find all suppliers connected to Product Y.
+
+Find the dependency path between a Tier-2 supplier and a plant.
+
+Which components supplied by suppliers from a particular country are used in which products?
+
+Submission: Push dataset creation and query code to GitHub. Submit a YouTube video explaining the business problem, graph model, relationships, queries, traversal, and results.

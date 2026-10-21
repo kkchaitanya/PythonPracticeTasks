@@ -1,0 +1,27 @@
+Graph Traversal and Multi-Hop Queries
+How this is marked
+
+What to build
+Using either Task 3 or Task 5's graph, concentrate specifically on graph traversal.
+
+Write at least 10 Cypher queries, including single-hop relationships, multi-hop relationships, filtering by properties, relationship-direction queries, aggregation/counting, path queries, and variable-length traversal where appropriate.
+
+For example, demonstrate how a question can move through
+
+Supplier
+
+↓
+
+Component
+
+↓
+
+Product
+
+↓
+
+Plant
+
+Then explain why answering a connected-data question like this feels different in a graph database compared with thinking purely in tables and joins.
+
+Submission: GitHub repository containing all 10+ queries and Python execution code + YouTube video where every important query is explained and demonstrated.
