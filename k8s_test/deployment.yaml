@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: euron-python
+  namespace: krish
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: euron-python
+  template:
+    metadata:
+      labels:
+        app: euron-python
+    spec:
+      containers:
+        - name: krish-container
+          image: euron-first:v1
+          imagePullPolicy: IfNotPresent  # <-- Change this line

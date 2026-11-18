@@ -5,7 +5,7 @@ import pandas as pd
 # ==========================================
 
 df = pd.read_csv("messy_customers.csv")
-
+df['age'] = pd.to_numeric(df['age'], errors='coerce')
 print("Original Dataset:")
 print(df.head())
 
@@ -43,7 +43,6 @@ print(df_dropna)
 # 5. fillna()
 # Fill missing values
 # ==========================================
-
 df["age"] = df["age"].fillna(df["age"].median())
 
 df["city"] = df["city"].fillna("Unknown")

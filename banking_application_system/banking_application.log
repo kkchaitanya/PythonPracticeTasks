@@ -1,0 +1,17 @@
+2026-08-14 16:58:49 - INFO - Logger initialized successfully.
+2026-08-14 16:59:00 - INFO - Account Created | Account:1001
+2026-08-14 22:41:33 - INFO - Logger initialized successfully.
+2026-08-14 22:41:48 - INFO - Account Created | Account:1002
+2026-08-14 22:42:04 - INFO - Transfer Successful | From:1001 To:1002 Amount:100.0
+2026-08-14 22:42:23 - INFO - Account Created | Account:1003
+2026-08-14 22:43:02 - INFO - Deposit Successful | Acc:1001 | Amount:10000.0
+2026-08-14 22:43:17 - INFO - Withdrawal Successful | Acc:1001 | Amount:10.0
+2026-08-14 22:47:00 - INFO - Logger initialized successfully.
+2026-08-14 22:47:09 - INFO - Account Created | Account:1004
+2026-08-15 00:54:14 - INFO - Logger initialized successfully.
+2026-08-15 00:54:25 - INFO - Account Created | Account:1005
+2026-08-15 00:54:34 - ERROR - deposit exception: 'NoneType' object has no attribute 'info'
+2026-08-15 00:54:54 - ERROR - withdraw excpetion 'NoneType' object has no attribute 'info'
+2026-08-15 00:55:45 - INFO - Balance Updated | Account:1001 | New Balance:20780.0
+2026-08-15 00:55:45 - INFO - Balance Updated | Account:1005 | New Balance:10100.0
+2026-08-15 00:55:45 - INFO - Transfer Successful | From:1001 To:1005 Amount:100.0

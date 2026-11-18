@@ -4,53 +4,29 @@ Create a CSV dataset containing at least 50 support tickets.
 Columns
 
 ticket_id
-
 customer_name
-
 category
-
 priority
-
 status
-
 assigned_agent
-
 resolution_time
-
 Categories
-
 Payment
-
 Technical
-
 Login
-
 Course
-
 Refund
-
 Account
-
 Priorities
-
 Low
-
 Medium
-
 High
-
 Critical
-
 Status
-
 Open
-
 In Progress
-
 Resolved
-
 Closed
-
 Perform
 
 Read the dataset.

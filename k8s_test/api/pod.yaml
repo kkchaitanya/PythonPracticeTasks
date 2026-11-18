@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: euron-hello-pod
+spec:
+  containers:
+  - name: fastapi-container
+    image: euron-hello:v1
+    imagePullPolicy: Never
+    ports:
+    - containerPort: 8000

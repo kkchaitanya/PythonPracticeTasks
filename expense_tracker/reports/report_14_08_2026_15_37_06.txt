@@ -1,0 +1,22 @@
+MONTHLY EXPENSE REPORT
+==============================
+
+Month: 07 Year: 2026
+Total Expense: 10000.0 
+
+CATEGORY SUMMARY 
+--------------------
+A: 10000.0
+
+B: 100000.0
+
+C: 100000.0
+
+D: 1000000.0
+
+HIGHEST EXPENSE
+--------------------
+Date: 2025-07-25
+Category: D
+Amount: 1000000.0
+Description: Python

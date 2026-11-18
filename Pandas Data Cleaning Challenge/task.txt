@@ -1,0 +1,82 @@
+What to build
+Create or download a deliberately messy dataset containing at least 100 rows.
+
+The dataset must contain
+
+Missing values
+
+Duplicate rows
+
+Incorrect capitalization
+
+Extra spaces
+
+Wrong data types
+
+Empty fields
+
+Example columns
+
+customer_id
+
+name
+
+age
+
+city
+
+email
+
+purchase_amount
+
+rating
+
+Students must demonstrate
+
+isnull()
+
+isnull().sum()
+
+dropna()
+
+fillna()
+
+duplicated()
+
+drop_duplicates()
+
+astype()
+
+str.strip()
+
+str.lower()
+
+str.upper()
+
+str.title()
+
+replace()
+
+Perform
+
+Detect missing data.
+
+Count missing values.
+
+Handle missing values.
+
+Detect duplicates.
+
+Remove duplicates.
+
+Clean customer names.
+
+Clean cities.
+
+Convert appropriate columns into correct data types.
+
+Compare dataset shape before and after cleaning.
+
+Save
+
+cleaned_customer_data.csv

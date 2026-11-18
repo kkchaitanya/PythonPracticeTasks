@@ -1,0 +1,2 @@
+kind load docker-image euron-hello:v1 --name euron-class
+kind create cluster --name euron-class

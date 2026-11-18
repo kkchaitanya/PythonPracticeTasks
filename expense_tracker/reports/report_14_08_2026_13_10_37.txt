@@ -1,0 +1,16 @@
+MONTHLY EXPENSE REPORT
+==============================
+
+Month: 07 Year: 2025
+Total Expense: 0 
+
+CATEGORY SUMMARY 
+--------------------
+A: 10000.0
+
+HIGHEST EXPENSE
+--------------------
+Date: 2026-07-25
+Category: A
+Amount: 10000.0
+Description: test
